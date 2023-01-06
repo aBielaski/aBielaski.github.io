@@ -17,3 +17,17 @@ header div{
     border: 1px solid silver;
 }
 
+.links{
+    border-radius: unset;
+    width: unset;
+    height: unset;
+}
+
+img{
+    max-width: 90%;
+}
+
+video{
+    max-width: 90%;
+}
+
