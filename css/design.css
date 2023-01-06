@@ -1,0 +1,19 @@
+div{
+    margin: 75px;
+}
+
+#div1{
+    margin-top: 20px;
+}
+
+header div{
+    margin: unset;
+}
+
+#smallerProfileImg{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border: 1px solid silver;
+}
+
