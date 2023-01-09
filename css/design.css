@@ -18,9 +18,14 @@ header div{
 }
 
 .links{
+    /*
     border-radius: unset;
     width: unset;
-    height: unset;
+    height: unset; */
+    margin: unset;
+    margin: 0px 30px;
+    padding: 10px;
+    width: 70px;
 }
 
 img{
@@ -29,5 +34,9 @@ img{
 
 video{
     max-width: 90%;
+}
+
+h1{
+    font-size: 45px;
 }
 
