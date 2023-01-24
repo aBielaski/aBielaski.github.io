@@ -28,7 +28,7 @@ header div{
     width: 70px;
 }
 
-img{
+main img{
     max-width: 99%;
 }
 
@@ -38,5 +38,18 @@ video{
 
 h1{
     font-size: 45px;
+}
+
+
+
+@media screen and (max-width: 873px)
+{
+    h1{
+        font-size: 30px;
+    }
+
+    .selkie{
+        height: auto;
+    }
 }
 
