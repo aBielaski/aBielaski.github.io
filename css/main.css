@@ -61,7 +61,7 @@ nav a{
 }
 
 .links{
-    min-width: 140px;
+    min-width: 140px;  /* delete? */
     background: rgb(192,192,192);
     background: linear-gradient(360deg, rgba(105,104,104,1) 0%, rgba(171,171,171,1) 44%, rgba(226,226,226,1) 100%);
     border: 2px solid black;

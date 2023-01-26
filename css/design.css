@@ -53,3 +53,16 @@ h1{
     }
 }
 
+@media screen and (max-width: 724px)
+{
+    nav a{
+        font-size: 15px;
+    }
+
+    .links{
+        width: 90px;
+        height: 75px;
+        min-width: unset;
+    }
+}
+
