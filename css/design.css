@@ -48,7 +48,7 @@ h1{
         font-size: 30px;
     }
 
-    .selkie{
+    .selkie, .heat{
         height: auto;
     }
 }
@@ -63,6 +63,11 @@ h1{
         width: 90px;
         height: 75px;
         min-width: unset;
+    }
+
+    .SMU{
+        max-width: 100%; 
+        height: auto;
     }
 }
 

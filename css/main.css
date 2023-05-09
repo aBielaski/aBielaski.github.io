@@ -153,6 +153,8 @@ li{
     margin: auto;
 }
 
+
+
 table{
     border: 3px solid black;
     border-collapse: collapse; 
@@ -162,7 +164,11 @@ td, th{
     padding: 8px;
     background-color: silver;
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
+}
+
+tbody tr:nth-child(even) td{
+    background-color: rgb(173, 171, 171);
 }
 
 td{
@@ -173,10 +179,13 @@ th{
     background-color: rgb(106, 106, 106);
 }
 
-.altRows td{
+/* .altRows td{
     background-color: rgb(173, 171, 171);
-}
+} */
 
+tr{
+    border-bottom: 3px solid black;
+}
 
 /* ---------------------------- footer ---------------------------- */
 footer{
@@ -198,6 +207,11 @@ main p{
 .selkie, .heat{
     width: 400px;
     height: 200px;
+}
+
+.travel{
+    width: 200px;
+    height: 400px;
 }
 
 .clothesMobileApp{
@@ -224,6 +238,16 @@ main p{
     height: auto;
 }
 
+.SMU{
+    max-width: 500px; 
+    height: auto;
+}
+
+#dashboard{
+    max-width: 800px; 
+    height: auto;
+}
+
 
 /* ---------------------------- responsiveness ---------------------------- */
 
@@ -231,6 +255,11 @@ main p{
 {
     #middle{
         flex-direction: column;
+    }
+
+    #dashboard{
+        max-width: 100%; 
+        height: auto;
     }
 }
 
@@ -285,6 +314,10 @@ main p{
     footer{
         margin-top: 20px;
     }
+
+    
+
+
 }
 
 
