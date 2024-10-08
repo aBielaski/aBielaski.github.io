@@ -1,0 +1,173 @@
+/* ---------------------------- body ----------------------------  */
+body{
+    background-image: url("../newImages/newBackground.png");   /* background */
+    background-position: top;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat;  */
+    /* background-attachment: fixed;   */
+    background-size: 100%;
+
+    font-size: 20px;
+
+    color: #9d9d9c;
+    font-family: 'Rubik', sans-serif;
+
+    /* font-family: 'Signika', sans-serif; /* font/text 
+    font-weight: 300;
+    color: silver;
+    text-align: center;
+
+    max-width: 2000px; /* width 
+    margin: auto;
+    border-right: 5px solid black;
+    border-left: 5px solid black; */
+}
+
+h1, h2, h3 {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: unset;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    padding-left: 40%;
+}
+
+h3 {
+    margin: 0 0 30px 0;
+}
+
+.pinkText {
+    color: #fc616b;
+}
+
+/* locationDiv -------------------------------------------------- */
+#locationDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#locationDiv p{
+    display: inline;
+    margin: unset;
+}
+
+#locationDiv img {
+    width: 20px;
+    height: auto;
+    display: inline;
+    padding: 0 5px;
+}
+
+.section {
+    padding: 25px;
+}
+
+.sectionContent {
+    display: flex;
+}
+
+/* aboutMe --------------------------------------------------*/
+#aboutMe {
+    background-color: black;
+}
+
+.circles {
+    background-color: #322d30;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+#aboutMe .sectionContent > div {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+.circles img {
+    min-width: 70%;
+    max-height: 70%;
+}
+
+/* projects --------------------------------------------------*/
+#projectImages img {
+    height: 25vh;
+    width: auto;
+    padding: 0 20px;
+}
+
+#projectImages .sectionContent {
+    border-top: 1px dotted #9d9d9c;
+    border-bottom: 1px dotted #9d9d9c;
+    padding: 30px 0;
+}
+
+/* experience --------------------------------------------------*/
+#experience {
+    background-color: #2c131e;
+}
+
+#experience .sectionContent > div {
+    padding: 10px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#experience .sectionContent > div:nth-child(even) {
+    background-color: black;
+}
+
+#experience .sectionContent > div:nth-child(odd) {
+    background-color: #322d30;
+}
+
+#experience ul {
+    padding-left: unset;
+}
+
+
+/* contact section --------------------------------------------------*/
+.textInput {
+    width: 50%;
+    opacity: 50%;
+}
+
+#contactMsg {
+    width: 100%;
+    opacity: 50%;
+}
+
+#contactSection button {
+    background-color: #322d30;
+    color: #fc616b;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+/* footer --------------------------------------------------*/
+footer {
+    border-top: 1px solid #9d9d9c90;
+    text-align: center;
+    margin: 0 25px;
+}
