@@ -1,13 +1,3 @@
-<!--    
-    Allison Bielaski - Student ID 8768866 - abielaski8866@conestogac.on.ca
-
-    ePortfolio Assignment 1 
-    INFO3130 The Emerging Interface - Sec1 - 24F
-
-    Created: Sept. 14, 2024
-    Completed: 
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +10,8 @@
     <!--tab logo & name-->
     <link
       rel="icon"
-      type="image/svg+xml"
+      type="image/png"
+      sizes="1226x1094"
       href="newImages/Logo.png"
     />
     <title> ePortfolio - Allison Bielaski </title>
@@ -37,161 +28,133 @@
     <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
 
     <!-- JS files -->
-    <!-- <script src="content.js"></script> -->
+    <script src="content.js"></script>
+    <script src="populatePage.js"></script>
 
 </head>
 
 <!---------------------------web page------------------------------->
 <body>
-    
     <header class="section">
-        <h1>ALLISON BIELASKI</h1>
-        <h2>PROGRAMMER & DESIGNER</h2>
-    </header>
+        <!-- -------------------- HEADER -------------------- -->
+        <h1 id="h1">ALLISON BIELASKI</h1>
+        <h2>PROGRAMMER & UX/UI DESIGNER</h2>
 
-    <!-- ---------------------------------------- -->
-    <div id="locationDiv">
-        <img src="newImages/location pink.png" />
-        <p>Ontario, Canada</p>
+        <!-- -------------------- LOCATION -------------------- -->
+        <div id="locationDiv">
+            <img src="newImages/icons/location pink.png" />
+            <p>Ontario, Canada</p>
+        </div>
+    </header>
+    
+    <!-- ------------------ ABOUT ME ---------------------- -->
+    <div class="section" id="aboutMe">
+        <button id="aboutMeScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
+        <h3>ABOUT ME</h3>
+        <div class="sectionContent" id="aboutMeList"></div>
+        <button id="aboutMeScrollRight" class="scrollBtns scrollRight">&gt;</button>
     </div>
     
-    <!-- ---------------------------------------- -->
-    <div class="section" id="aboutMe">
-        <h3>ABOUT ME</h3>
-        <div class="sectionContent">
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
+    <!-- -------------------- DESIGNS -------------------- -->
+    <div class="section" id="designs">
+        <button id="designsScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
 
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="newImages/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
+        <div style="display: flex;">
+            <h3>DESIGN / PROTOTYPE / ART SAMPLES</h3>
+            <p style="width: 85%; text-align: center;">Click on an image to learn/see more!</p>
         </div>
         
+        <div class="sectionContent" id="designItems"></div>
+
+        <button id="designsScrollRight" class="scrollBtns scrollRight">&gt;</button>
     </div>
-    
-    <!-- ---------------------------------------- -->
-    <div class="section" id="projectImages">
-        <h3>PROJECT SAMPLES</h3>
-        <div class="sectionContent">
-            <img src="newImages/Assign1_HealthDashboard2 copy.png" />
+
+    <!-- -------------------- PROGRAMMING -------------------- -->
+    <div class="section" id="programs">
+        <button id="programsScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
+
+        <div style="display: flex;">
+            <h3>PROGRAMMING SAMPLES</h3>
+            <p style="width: 85%; text-align: center;">Click on an image to learn/see more!</p>
+        </div>
+        
+        <div class="sectionContent" id="programItems">
             <img src="newImages/selkie1.png" />
             <img src="newImages/dashboard.png" />
             <img src="newImages/clothes1.png" />
             <img src="newImages/fish1.png" />
+            <img src="newImages/Assign1_HealthDashboard2 copy.png" />
             <img src="newImages/selkie14.png" />
+            <img src="newImages/dashboard.png" />
         </div>
+
+        <button id="programsScrollRight" class="scrollBtns scrollRight">&gt;</button>
     </div>
 
-    <!-- ---------------------------------------- -->
+    <!-- --------------------- EXPERIENCE ------------------- -->
     <div class="section" id="experience">
+        <button id="experienceScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
         <h3>RELEVANT EXPERIENCE / COURSES</h3>
+        <div class="sectionContent" id="experienceList"></div>
+        <button id="experienceScrollRight" class="scrollBtns scrollRight">&gt;</button>
+    </div>
 
-        <div class="sectionContent">
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
+    <!-- --------------------- FOOTER ------------------- -->
+    <footer>
+        <p id="siteFooter"></p>
+    </footer>
 
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
+    <!-- -------------------- POPUP -------------------- -->
+    <div id="screenOverlay">
+        <div id="popup">
+            <div id="innerPopup">
+                <button id="closeBtn">X</button>
+                <h5 id="popupTitle">title</h5>
+                <div id="popupContent">
+                    <div id="pictureArea"></div>
+                    
+                    <p id="popupContentDescription">description</p>
+                </div>
+                
             </div>
         </div>
     </div>
 
-    <!-- ---------------------------------------- -->
-    <div class="section" id="contactSection">
-        <h3>CONTACT</h3>
-        <input type="text" placeholder="Name" class="textInput"/> </br></br>
-        <input type="email" placeholder="Email" class="textInput"/> </br></br>
-        <textarea placeholder="Message" rows="4" id="contactMsg"></textarea> </br></br>
-        <button>Send</button>
-    </div>
-
-    <!-- ---------------------------------------- -->
-    <footer>
-        <p id="siteFooter" class="pinkText">&copy; Copyright 2024 - Allison Bielaski</p>
-    </footer>
     
+</body>
+</html>
+
+
+
+
+
+
+<!--    DRAFT STUFF
+
+====================================================================================================================
+//====================================================================================================================
+//====================================================================================================================
+//====================================================================================================================
+//====================================================================================================================
+<nav>
+    <a href = "designs.html"> <div class="links"> Design Samples </div>  </a> 
+    <img id="profileImg" src="images/profilePicture.jpg">
+</nav>
+ePortfolioFavicon.png
+--> 
+
+
+
+<!-- <img src="newImages/selkie1.png" />
+            <img src="newImages/dashboard.png" />
+            <img src="newImages/clothes1.png" />
+            <img src="newImages/fish1.png" />
+            <img src="newImages/Assign1_HealthDashboard2 copy.png" />
+            <img src="newImages/selkie14.png" />
+            <img src="newImages/dashboard.png" /> -->
+
+<!-- <div id="gap"></div> -->
+
 
     <!-- header
     <header>
@@ -211,21 +174,161 @@
     <footer>
         <p id="siteFooter"></p>
     </footer> -->
+
+
+
+        <!-- <button style="color:blue;" id="newScroll">Hello</button> -->
+
+
+    <!-- ---------------------------------------- -->
+    <!-- <div class="section" id="contactSection">
+        <h3>CONTACT</h3>
+        <input type="text" placeholder="Name" class="textInput"/> </br></br>
+        <input type="email" placeholder="Email" class="textInput"/> </br></br>
+        <textarea placeholder="Message" rows="4" id="contactMsg"></textarea> </br></br>
+        <button>Send</button>
+    </div> -->
+
+
+
+            <!-- <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
     
-</body>
-</html>
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+    
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+    
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+    
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+    
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div>
+    
+            <div>
+                <div class="circles">
+                    <img src="newImages/location pink.png" />
+                </div>
+                <p class="pinkText">Detail-Oriented</p>
+            </div> -->
 
 
 
 
 
 
-<!--    DRAFT STUFF
 
-<nav>
-    <a href = "designs.html"> <div class="links"> Design Samples </div>  </a> 
-    <img id="profileImg" src="images/profilePicture.jpg">
-</nav>
-ePortfolioFavicon.png
+            <!-- <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
 
---> 
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="pinkText">VARLAB</h4>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                    <li>Unity</li>
+                </ul>
+            </div> -->
