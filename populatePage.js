@@ -1,8 +1,13 @@
+//newDiv.setAttribute("tabindex", "0"); // Make it keyboard-focusable
+
+
+
 //--------------------------------------------------------------------------
 window.onload = function setInitialData() {
     document.getElementById("siteFooter").innerHTML = footer;
     populateAboutMeSection();
     populateDesignSection();
+    //populateProgrammingSection();
     populateExperienceSection();
     document.getElementById("aboutMeList").scrollLeft = 0;
     document.getElementById("designItems").scrollLeft = 0;
@@ -14,8 +19,14 @@ window.onload = function setInitialData() {
     setUpScrollEventListeners();
 }
 
+
+//================================================================================
 //----------------------------------CLICKS----------------------------------------
+//================================================================================
 function setUpClickEventListeners() {
+    var carouselImageArray = [];
+    var carouselImageIndex = 0;
+
     Array.from(document.getElementsByClassName("clickable")).forEach(
         function(element, index, array) {
             element.addEventListener("click", function () {
@@ -26,32 +37,91 @@ function setUpClickEventListeners() {
                 });
 
                 document.getElementById("screenOverlay").style.visibility ="visible";
+                disableBackgroundScrollbarWhenPopupOpen(true);
             });
         }
     );
 
     document.getElementById("closeBtn").addEventListener("click", function () {
         document.getElementById("screenOverlay").style.visibility ="hidden";
+        document.getElementById("popupCarouselLeft").style.visibility ="hidden";
+        document.getElementById("popupCarouselRight").style.visibility ="hidden";
+        disableBackgroundScrollbarWhenPopupOpen(false);
     });
 
-    //populate pop up --------------------------------------
+    document.getElementById("popupCarouselLeft").addEventListener("click", function () {
+        rotateCarouselImages(false);
+    });
+
+    document.getElementById("popupCarouselRight").addEventListener("click", function () {
+        rotateCarouselImages(true);
+    });
+
+    //-------------------------------------------------------------------
+    //-----------------------------------------------------------------
     function populatePopupWithImageDataClicked(item) {
+        document.getElementById("popupTitle").innerHTML = item.title;
+        document.getElementById("popupContentDescription").innerHTML = item.description;
+        
+        carouselImageArray = item.imagePaths;
+        carouselImageIndex = 0;
+        loadDisplayImage(carouselImageArray, carouselImageIndex);
+
+        if (carouselImageArray.length < 2) {
+            document.getElementById("popupCarouselLeft").style.visibility ="hidden";
+            document.getElementById("popupCarouselRight").style.visibility ="hidden";
+        } else {
+            document.getElementById("popupCarouselLeft").style.visibility ="visible";
+            document.getElementById("popupCarouselRight").style.visibility ="visible";
+        }
+    }
+
+    //------------------------------------------------------------------
+    //-----------------------------------------------------------------
+    function rotateCarouselImages(directionRight) {
+        let i = carouselImageIndex;
+        i = directionRight ? i + 1 : i - 1;
+
+        if (i === carouselImageArray.length && directionRight) {
+            i = 0;
+        }
+        if (i === -1 && !directionRight) {
+            i = carouselImageArray.length - 1;
+        }
+
+        carouselImageIndex = i;
+        loadDisplayImage(carouselImageArray, carouselImageIndex);
+    }
+
+    //------------------------------------------------------------------
+    //-----------------------------------------------------------------
+    function loadDisplayImage(imageArray, index) {
         let oldPicture = document.getElementById("pictureArea").firstChild;
         if (oldPicture !== null) {
             document.getElementById("pictureArea").removeChild(oldPicture);
         }
-        
-
-        document.getElementById("popupTitle").innerHTML = item.title;
-        document.getElementById("popupContentDescription").innerHTML = item.description;
 
         let displayImage = document.createElement("img");
-        displayImage.src = item.imagePaths.at(0);
+        displayImage.src = imageArray.at(index);
+        
         document.getElementById("pictureArea").appendChild(displayImage);
+    }
+
+    //-----------------------------------------------------------------
+    //-----------------------------------------------------------------
+    function disableBackgroundScrollbarWhenPopupOpen(popupOpen) {
+        if (popupOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
     }
 }
 
-//---------------------------------SCROLL-----------------------------------------mousedown mouseup  
+
+//================================================================================
+//---------------------------------SCROLL-----------------------------------------
+//================================================================================
 function setUpScrollEventListeners() {
     const scrollList = [
         {buttonId: "aboutMeScrollRight", scrollDiv: "aboutMeList", direction: "right", sectionName: "aboutMe"},
@@ -74,6 +144,13 @@ function setUpScrollEventListeners() {
         let btnName = document.getElementById(btn.buttonId);
         btnName.addEventListener("mouseover", function(){ startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); });
         btnName.addEventListener("mouseout", stopScrolling);
+    });
+
+    //mousedown & mouseup events
+    scrollList.forEach(btn => {
+        let btnName = document.getElementById(btn.buttonId);
+        btnName.addEventListener("ontouchstart", function(){ startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); });
+        btnName.addEventListener("ontouchend", stopScrolling);
     });
    
     //helper functions to remove code duplication
@@ -115,6 +192,9 @@ function setUpScrollEventListeners() {
 }
 
 
+//================================================================================
+//-------------------------------POPULATE CONTENT---------------------------------
+//================================================================================
 
 //--------------------------------------------------------------------------
 function populateAboutMeSection() {
@@ -152,6 +232,25 @@ function populateDesignSection() {
         designItems.appendChild(imageElement);
     });
 }
+
+function populateProgrammingSection() {
+    let programItems = document.getElementById("programItems");
+    programmingSamples.forEach(item => {
+        let imageElement = document.createElement("img");
+        imageElement.src = item.imagePaths.at(0);
+        imageElement.setAttribute("class", "clickable");
+        imageElement.id = item.id;
+
+        programItems.appendChild(imageElement);
+    });
+}
+
+/**
+ <video controls width="1200px" poster="images/rocket.png">
+    <source src="videos/rocket2.mp4" type="video/mp4">
+    <p>Sorry, this browser does not support videos.</p>
+</video>
+ */
 
 //--------------------------------------------------------------------------
 function populateExperienceSection() {

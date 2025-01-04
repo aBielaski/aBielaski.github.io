@@ -30,25 +30,22 @@ var designSamples = [
     {
         id: "selkie",
         title: "Prototyped Mobile App Game Design - Selkie Quest", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/selkie1.png", "newImages/selkie2.png", "newImages/selkie3.png", "newImages/selkie4.png", "newImages/selkie5.png"], 
         description: `In this project, my group needed to create a game related to Selkies (an ancient Irish mythological creature that can shift from seal to 
         human by shedding their skin when they leave the sea). Because Selkie’s are charming and hardworking, the family who the Selkie was living with moved its 
         sealskin across town to keep the Selkie from going back to the sea. The Selkie must battle opponents along the way to get it back but can enlist the help 
         of other mythological creatures (that the player has in their card deck). The screen prototypes below were designed by me and are for the use cases: purchasing 
         a card package & playing the single player story mode. My inspiration behind this design was a blue water background for the seal, the gold border for ancient 
-        mythology, and the land is an image of Ireland because it was ancient *Irish* mythology.
-        In this project, my group needed to create a game related to Selkies (an ancient Irish mythological creature that can shift from seal to 
-        human by shedding their skin when they leave the sea). Because Selkie’s are charming and hardworking, the family who the Selkie was living with moved its 
-        sealskin across town to keep the Selkie from going back to the sea. The Selkie must battle opponents along the way to get it back but can enlist the help 
-        of other mythological creatures (that the player has in their card deck). The screen prototypes below were designed by me and are for the use cases: purchasing 
-        a card package & playing the single player story mode. My inspiration behind this design was a blue water background for the seal, the gold border for ancient 
-        mythology, and the land is an image of Ireland because it was ancient *Irish* mythology.`, 
+        mythology, and the land is an image of Ireland because it was ancient *Irish* mythology. <br>
+        [Course: User Experience; Created Via: Justinmind Prototyper Application]`, 
         course: "User Experience", 
         techUsed: "Justinmind Prototyper Application"
     }, 
     {
         id: "smartApplianceDashboard",
         title: "Prototyped Data Visualization Dashboard for Smart Home Appliances", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/dashboard.png"], 
         description: `The graphs were created in Microsoft Excel and modified for aesthetic appeal then transferred over to Photoshop where I put it all together into a 
         dashboard design. The logo was also created by me and is a surveillance camera with a bubble/network graph inside in the shape of a drone. It was meant to signify 
@@ -60,6 +57,7 @@ var designSamples = [
     {
         id: "temp1",
         title: "Prototyped Mobile App Game Design - Selkie Quest", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/selkie1.png", "newImages/selkie2.png", "newImages/selkie3.png", "newImages/selkie4.png", "newImages/selkie5.png"], 
         description: `In this project, my group needed to create a game related to Selkies (an ancient Irish mythological creature that can shift from seal to 
         human by shedding their skin when they leave the sea). Because Selkie’s are charming and hardworking, the family who the Selkie was living with moved its 
@@ -73,6 +71,7 @@ var designSamples = [
     {
         id: "temp2",
         title: "Prototyped Data Visualization Dashboard for Smart Home Appliances", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/dashboard.png"], 
         description: `The graphs were created in Microsoft Excel and modified for aesthetic appeal then transferred over to Photoshop where I put it all together into a 
         dashboard design. The logo was also created by me and is a surveillance camera with a bubble/network graph inside in the shape of a drone. It was meant to signify 
@@ -83,6 +82,7 @@ var designSamples = [
     {
         id: "temp3",
         title: "Prototyped Mobile App Game Design - Selkie Quest", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/selkie1.png", "newImages/selkie2.png", "newImages/selkie3.png", "newImages/selkie4.png", "newImages/selkie5.png"], 
         description: `In this project, my group needed to create a game related to Selkies (an ancient Irish mythological creature that can shift from seal to 
         human by shedding their skin when they leave the sea). Because Selkie’s are charming and hardworking, the family who the Selkie was living with moved its 
@@ -96,6 +96,7 @@ var designSamples = [
     {
         id: "temp4",
         title: "Prototyped Data Visualization Dashboard for Smart Home Appliances", 
+        displayImagePath: "newImages/selkie1.png",
         imagePaths: ["newImages/dashboard.png"], 
         description: `The graphs were created in Microsoft Excel and modified for aesthetic appeal then transferred over to Photoshop where I put it all together into a 
         dashboard design. The logo was also created by me and is a surveillance camera with a bubble/network graph inside in the shape of a drone. It was meant to signify 
@@ -103,6 +104,9 @@ var designSamples = [
         course: "Graphic Techniques for Software Design", 
         techUsed: " Adobe Photoshop, Microsoft Excel"
     }, 
+];
+
+var programmingSamples = [
 
 ];
 
