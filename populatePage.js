@@ -7,7 +7,7 @@ window.onload = function setInitialData() {
     document.getElementById("siteFooter").innerHTML = footer;
     populateAboutMeSection();
     populateDesignSection();
-    //populateProgrammingSection();
+    populateProgrammingSection();
     populateExperienceSection();
     document.getElementById("aboutMeList").scrollLeft = 0;
     document.getElementById("designItems").scrollLeft = 0;
@@ -27,10 +27,17 @@ function setUpClickEventListeners() {
     var carouselImageArray = [];
     var carouselImageIndex = 0;
 
+    //click image to open pop up
     Array.from(document.getElementsByClassName("clickable")).forEach(
         function(element, index, array) {
             element.addEventListener("click", function () {
                 designSamples.forEach(item => {
+                    if (item.id === element.id) {
+                        populatePopupWithImageDataClicked(item);
+                    }
+                });
+
+                programmingSamples.forEach(item => {
                     if (item.id === element.id) {
                         populatePopupWithImageDataClicked(item);
                     }
@@ -42,17 +49,22 @@ function setUpClickEventListeners() {
         }
     );
 
+    //close popup
     document.getElementById("closeBtn").addEventListener("click", function () {
+        //TODO: change to popup.style.display = "none"; or "block" ??
         document.getElementById("screenOverlay").style.visibility ="hidden";
         document.getElementById("popupCarouselLeft").style.visibility ="hidden";
         document.getElementById("popupCarouselRight").style.visibility ="hidden";
+        //TODO: stop video playing
         disableBackgroundScrollbarWhenPopupOpen(false);
     });
 
+    //click popup left carousel btn
     document.getElementById("popupCarouselLeft").addEventListener("click", function () {
         rotateCarouselImages(false);
     });
 
+    //click popup right carousel btn
     document.getElementById("popupCarouselRight").addEventListener("click", function () {
         rotateCarouselImages(true);
     });
@@ -101,11 +113,36 @@ function setUpClickEventListeners() {
             document.getElementById("pictureArea").removeChild(oldPicture);
         }
 
-        let displayImage = document.createElement("img");
-        displayImage.src = imageArray.at(index);
+        let fileExtension = imageArray.at(index).split(".").pop();
+        let attachment;
+
+        if (fileExtension === "mp4") {
+            //video
+            attachment = document.createElement("video");
+            attachment.setAttribute("controls", "controls");
+            attachment.setAttribute("poster", "images/icons/video.png");
+
+            let source = document.createElement("source");
+            source.src = imageArray.at(index);
+            source.type = "video/mp4";
+
+            attachment.appendChild(source);
+        } else {
+            //image
+            attachment = document.createElement("img");
+            attachment.src = imageArray.at(index);
+        }
         
-        document.getElementById("pictureArea").appendChild(displayImage);
+        
+        document.getElementById("pictureArea").appendChild(attachment);
     }
+
+    /**
+ <video controls width="1200px" poster="images/rocket.png">
+    <source src="videos/rocket2.mp4" type="video/mp4">
+    <p>Sorry, this browser does not support videos.</p>
+</video>
+ */
 
     //-----------------------------------------------------------------
     //-----------------------------------------------------------------
@@ -139,6 +176,8 @@ function setUpScrollEventListeners() {
 
     let scrollInterval;
 
+    //add mouse scroll option?
+
     //mouseover & mouseout events
     scrollList.forEach(btn => {
         let btnName = document.getElementById(btn.buttonId);
@@ -146,7 +185,7 @@ function setUpScrollEventListeners() {
         btnName.addEventListener("mouseout", stopScrolling);
     });
 
-    //mousedown & mouseup events
+    //mobile touch events  ---------------mousedown & mouseup events -------TODO: fix bug when at end points
     scrollList.forEach(btn => {
         let btnName = document.getElementById(btn.buttonId);
         btnName.addEventListener("ontouchstart", function(){ startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); });
@@ -225,7 +264,7 @@ function populateDesignSection() {
     let designItems = document.getElementById("designItems");
     designSamples.forEach(item => {
         let imageElement = document.createElement("img");
-        imageElement.src = item.imagePaths.at(0);
+        imageElement.src = item.displayImagePath;
         imageElement.setAttribute("class", "clickable");
         imageElement.id = item.id;
 
@@ -237,7 +276,7 @@ function populateProgrammingSection() {
     let programItems = document.getElementById("programItems");
     programmingSamples.forEach(item => {
         let imageElement = document.createElement("img");
-        imageElement.src = item.imagePaths.at(0);
+        imageElement.src = item.displayImagePath;
         imageElement.setAttribute("class", "clickable");
         imageElement.id = item.id;
 
@@ -245,12 +284,7 @@ function populateProgrammingSection() {
     });
 }
 
-/**
- <video controls width="1200px" poster="images/rocket.png">
-    <source src="videos/rocket2.mp4" type="video/mp4">
-    <p>Sorry, this browser does not support videos.</p>
-</video>
- */
+
 
 //--------------------------------------------------------------------------
 function populateExperienceSection() {
@@ -259,7 +293,7 @@ function populateExperienceSection() {
         let itemDiv = document.createElement("div");
 
         let iconImg = document.createElement("img");
-        iconImg.src = item.type === "job" ? "newImages/icons/job.png" : "newImages/icons/school.png";
+        iconImg.src = item.type === "job" ? "images/icons/job.png" : "images/icons/school.png";
 
         let title = document.createElement("h5");
         title.setAttribute("class", "pinkText");

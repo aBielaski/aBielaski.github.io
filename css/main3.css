@@ -4,7 +4,7 @@ html {
 
 /* ---------------------------- body ----------------------------  */
 body{
-    background-image: url("../newImages/newBackground.png");   /* background */
+    background-image: url("../images/newBackground.png");   /* background */
     background-position: top;
     /* background-size: cover; */
     /* background-repeat: no-repeat;  */
@@ -200,6 +200,11 @@ h3 {
     margin: 0px 20px 10px;
 }
 
+#programItems img:hover {
+    border: 3px solid #e6424d;
+    cursor: pointer;
+}
+
 /* experience --------------------------------------------------*/
 #experience {
     position: relative;
@@ -264,6 +269,7 @@ footer {
     right: 0;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 2;
+    visibility: hidden;
 }
 
 #popup {
@@ -297,6 +303,7 @@ footer {
     border-radius: 50%;
     padding: 0 6px;
     z-index: 4;
+    border: 2px solid #9d9d9c;
 }
 
 #closeBtn:hover {
@@ -338,7 +345,7 @@ footer {
     align-items: center;
 }
 
-#pictureArea img {
+#pictureArea img, #pictureArea video {
     max-width: calc(100% - 120px);
     max-height: 90%;
 }
@@ -348,7 +355,7 @@ footer {
     margin-top: 15px;
     height: calc(100% - 15px);
     width: calc(100% - 30px);
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 0 15px;
     overflow-y: auto;
@@ -439,7 +446,7 @@ footer {
         width: 50%;
         font-size: 2rem;
     }
-    #pictureArea img {
+    #pictureArea img, #pictureArea video {
         max-width: 95%;
         max-height: calc(100% - 100px);
     }
@@ -459,6 +466,9 @@ footer {
     #popup {
         width: 85%;
         height: 85%;
+    }
+    #popupContent p{
+        font-size: 1rem;
     }
 }
 
