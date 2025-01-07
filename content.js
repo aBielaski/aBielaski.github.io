@@ -29,32 +29,31 @@ const designSamples = [
         a card package & playing the single player story mode. My inspiration behind this design was a blue water background for the seal, the gold border for ancient 
         mythology, and the land is an image of Ireland because it was ancient *Irish* mythology. <br>
         [Course: User Experience; Tools Used: Justinmind Prototyper Application]`, 
-        
     }, 
     {
         id: "dashboards",
         title: "Data Visualization Dashboards", 
         displayImagePath: "images/designs/dashboards/smartDashboard.png",
         imagePaths: ["images/designs/dashboards/dashboardDisplayImage.png", "images/designs/dashboards/smartDashboard.png", "images/designs/dashboards/smartDashboardLogo.png", 
-            "images/designs/dashboards/healthDashboard.png", "images/designs/dashboards/realEstateDashboard.PNG"], 
+            "images/designs/dashboards/realEstateDashboard.PNG", "images/designs/dashboards/healthDashboard.png"], 
         description: `<u>Smart Home Appliance Company Analytics:</u> <br>
         First, the graphs were created in Microsoft Excel and modified for aesthetic appeal then transferred over to Photoshop where I put it all together into a 
         dashboard design. The logo was also created by me and is a surveillance camera with a bubble/network graph inside in the shape of a drone. It was meant to signify 
         the monitoring of data for a smart home appliance company. <br>
         [Course: Graphic Techniques for Software Design; Tools Used: Adobe Photoshop, Microsoft Excel] <br><br>
         
+        <u>Real Estate Agent Tool:</u> <br>
+        This dashboard was designed by me based on a data set to help real estate agents easily narrow down the top zip codes they should take their clients to within their price range, 
+        to find the best and biggest listings. There are lots of filter options on the left side, as well as click-to-filter functionality which also adjusts the other graphs when one 
+        data section is selected.
+        <br> [Course: Data Science and Visualization; Tools Used: Power BI]<br><br>
+
         <u>Health Tracker:</u> <br>
         After learning dashboard design best practices, I put this design together with a few colours and ample whitespace to prevent the user from becoming overwhelmed. I decided
         on a green theme because healthiness is associated with green vegetables. Red was used as a warning/alert to identify when key performance indicators/goals are not being 
         met. There are settings icons which allow the user to adjust the time frames/intervals to their liking if they want to explore further as well. Otherwise, appropriate graph types
         were chosen and everything was labelled for clarity.
-        <br> [Course: Data Science and Visualization; Tools Used: Adobe Photoshop, Microsoft Excel] <br><br>
-        
-        <u>Real Estate Agent Tool:</u> <br>
-        This dashboard was designed by me based on a data set to help real estate agents easily narrow down the top zip codes they should take their clients to within their price range, 
-        to find the best and biggest listings. There are lots of filter options on the left side, as well as click-to-filter functionality which also adjusts the other graphs when one 
-        data section is selected.
-        <br> [Course: Data Science and Visualization; Tools Used: Power BI]`, 
+        <br> [Course: Data Science and Visualization; Tools Used: Adobe Photoshop, Microsoft Excel]`, 
     }, 
     {
         id: "music",
@@ -77,8 +76,8 @@ const designSamples = [
         ], 
         description: `Above is my design for an application in which users can upload pictures of their clothes and put outfits together. The app keeps track of when something 
         was worn last and will generate outfit suggestions that haven't been worn in a while (based on the weather) to remove the morning stress of trying to think of something 
-        new to wear. <br>
-        [Course: User Experience; Tools Used: Justinmind Prototyper Application]`, 
+        new to wear.
+        <br> [Course: User Experience; Tools Used: Justinmind Prototyper Application]`, 
     }, 
     {
         id: "parent",
@@ -95,14 +94,44 @@ const designSamples = [
     {
         id: "fish",
         title: "Graphic Illustrations for a Children's Book", 
-        displayImagePath: "images/designs/fish/fishDisplay.PNG",
+        displayImagePath: "images/designs/fish/fishDisplay.png",
         imagePaths: ["images/designs/fish/fishDisplayImage.PNG", "images/designs/fish/fish1.png", "images/designs/fish/fish2.png", "images/designs/fish/fish3.png",
             "images/designs/fish/fish4.png", "images/designs/fish/fish5.png", "images/designs/fish/fish6.png"
         ], 
         description: `This children's book about a fish getting scared and seeking therapy was written and illustrated by me. The images were created using the curvature pen tool, 
-        the brush tool, effects/filters, gradients, etc. <br>
-        [Course: Graphic Techniques for Illustration; Tools Used: Adobe Illustrator]`, 
+        the brush tool, effects/filters, gradients, etc. 
+        <br> [Course: Graphic Techniques for Illustration; Tools Used: Adobe Illustrator]`, 
     },
+    {
+        id: "bathroom",
+        title: "3D Bathroom Environment Build", 
+        displayImagePath: "images/designs/bathroom.PNG",
+        imagePaths: ["videos/bathroom.mp4", "images/designs/bathroom.PNG"
+        ], 
+        description: `For this project, I modelled the majority of this 3D bathroom environment and used the UV editor to align the textures. There are two animations; one uses 
+        fluid inflow physics and domain baking for the bathtub water tap, and the other is the shower cord being pulled up demonstrating rigging with multiple bones/inverse kinematics.
+        Camera movement and lighting were added to showcase everything in the end. (The only objects imported were the tree picture, the plant, and the window which was part of the 
+        assignment).
+        <br> [Course: Digital Motion and Sound; Tools Used: Blender 4.2]`, 
+    },
+    // {
+    //     id: "",
+    //     title: "", 
+    //     displayImagePath: "images/designs//",
+    //     imagePaths: ["images/designs//", 
+    //     ], 
+    //     description: `
+    //     <br> [Course: ; Tools Used: ]`, 
+    // },
+    // {
+    //     id: "",
+    //     title: "", 
+    //     displayImagePath: "images/designs//",
+    //     imagePaths: ["images/designs//", 
+    //     ], 
+    //     description: `
+    //     <br> [Course: ; Tools Used: ]`, 
+    // },
     
 ];
 
@@ -113,7 +142,7 @@ const designSamples = [
 //game final project //
 
 //asp.net final
-//js mongo final
+//js mongo final //
 //millionaire game?
 
 const programmingSamples = [
@@ -160,6 +189,32 @@ const programmingSamples = [
         is opened and completely reset for a new trip when needed.
         <br> [Course: Programming Mobile Applications I; Created Via: Visual Studio Code & jQuery]`, 
     },
+    {
+        id: "abasts",
+        title: "Computer Programming Club Website For Book Loans", 
+        displayImagePath: "images/programs/abasts/abasts12.png",
+        imagePaths: ["images/programs/abasts/abasts1.png", "images/programs/abasts/abasts2.png", "images/programs/abasts/abasts3.png", "images/programs/abasts/abasts4.png", "images/programs/abasts/abasts5.png", 
+            "images/programs/abasts/abasts6.png", "images/programs/abasts/abasts7.png", "images/programs/abasts/abasts8.png", "images/programs/abasts/abasts9.png", "images/programs/abasts/abasts10.png", 
+            "images/programs/abasts/abasts11.png", "images/programs/abasts/abasts12.png", "images/programs/abasts/abasts13.png", "images/programs/abasts/abasts14.png", "images/programs/abasts/abasts15.png", 
+            "images/programs/abasts/abasts16.png", "images/programs/abasts/abasts17.png", "images/programs/abasts/abasts18.png", "images/programs/abasts/abasts19.png"
+        ], 
+        description: `In this term-long project, my team and I built a website for a computer programming club using Java Web Technologies with the NetBeans IDE. Users are able to register, view, edit, or 
+        remove members, and any changes are reflected in the MySQL database. They can also reserve books on loan which then adds them to their eCart and updates the quantity on hand. By the end of the term, 
+        we had demonstrated an understanding of HTTP request and response, ServletContext, doGet/doPost, Java Server Pages (JSP’s), Java Server Pages Standard Tag Library (JSTL), expression language (EL), 
+        input validation, error handling, JavaBeans, Java Database Connectivity (JDBC), sessions, Junit testing, and the Model-View-Controller pattern (MVC).
+        <br> [Course: Programming: JAVA Web Technologies; Created Via: NetBeans]`, 
+    },
+    {
+        id: "mongoEJSNode",
+        title: "Online Store Web Application", 
+        displayImagePath: "images/programs/mongo/clothing1.png",
+        imagePaths: ["videos/MongoEJSNodeDemo.mp4", "images/programs/mongo/clothing1.png", "images/programs/mongo/clothing2.png", "images/programs/mongo/clothing3.png", "images/programs/mongo/clothing4.png"
+        ], 
+        description: `For this assignment, I developed a server-side web application for an online store using Node.js, Express, EJS, and MongoDB. The application includes a web form to collect customer and order 
+        details, processes the form data server-side after validations pass to generate a receipt, and stores the information in a MongoDB database. All the purchase orders can then be retrieved and reviewed together 
+        on a separate web page.
+        <br> [Course: Programming Dynamic Websites; Created Via: Visual Studio Code]`, 
+    },
     // {
     //     id: "",
     //     title: "", 
@@ -172,85 +227,176 @@ const programmingSamples = [
 ];
 
 const experience = [
+    //F24 ------------------------------------------------------
+    {
+        type: "course",
+        title: "Programming: Mobile Applications II",
+        dates: "Fall 2024 Term",
+        skills: ["Android Studio", "Firebase", "Java", "MVVM Architecture"]
+    },
+    {
+        type: "course",
+        title: "Digital Motion and Sound",
+        dates: "Fall 2024 Term",
+        skills: ["Blender", "3D Modelling", "Animations"]
+    },
+    {
+        type: "course",
+        title: "Data Science and Visualization",
+        dates: "Fall 2024 Term",
+        skills: ["Power BI", "Tableau", "Dashboard Design", "Data Cleaning", "Kafka"]
+    },
+    {
+        type: "course",
+        title: "The Emerging Interface",
+        dates: "Fall 2024 Term",
+        skills: ["Figma", "Accessibility", "Web & Mobile Designs", "Persona Research"]
+    },
+    {
+        type: "course",
+        title: "IT Entrepreneurship",
+        dates: "Fall 2024 Term",
+        skills: ["Pitch Delivery", "Business Plan Development", "Target Market Research", "Problem-Solving"]
+    },
+    //VARLab ---------------------------------------------------
     {
         type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
+        title: "Software Developer <br> (Co-op) <br> Virtual and Augmented Reality Lab @ Conestoga",
         dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        skills: ["Unity", "Visual Studio 2022 & <br> Visual Studio Code", "C#", "Integration Testing", "React", "TypeScript"]
+    },
+    //W23 ------------------------------------------------------
+    {
+        type: "course",
+        title: "Software Quality and Usability",
+        dates: "Winter 2023 Term",
+        skills: ["Katalon", "Jest", "Agile Workflow", "Code Quality"]
+    },
+    {
+        type: "course",
+        title: "Database: SQL",
+        dates: "Winter 2023 Term",
+        skills: ["MySQL", "SQL Queries & Subqueries"]
+    },
+    {
+        type: "course",
+        title: "Programming: JAVA Web Technologies",
+        dates: "Winter 2023 Term",
+        skills: ["JavaServer Pages", "Servlets", "MySQL", "JUnit Testing", "Session Management", "Java"]
+    },
+    {
+        type: "course",
+        title: "Graphic Techniques for Software Design", //--================
+        dates: "Winter 2023 Term",
+        skills: ["Adobe Photoshop", "Web Design", "Data Visualization", "Logo Illustration", "Wireframe Sketching", "Technical Standard <br> Documentation"]
+    },
+    {
+        type: "course",
+        title: "Programming Mobile Applications I",
+        dates: "Winter 2023 Term",
+        skills: ["Visual Studio Code", "JavaScript", "jQuery", "HTML/CSS", "Web SQL"]
+    },
+    {
+        type: "course",
+        title: "Psychology for Software Design",
+        dates: "Winter 2023 Term",
+        skills: ["Problem Analysis", "Constructing User Stories, <br> User Flows & Personas", "Design Principle Application"]
+    },
+    //F22 ------------------------------------------------------
+    {
+        type: "course",
+        title: "Systems Analysis and Design",
+        dates: "Fall 2022 Term",
+        skills: ["Visual Paradigm 16.3", "Software Development Life Cycle", "Agile", "Gathering Requirements", "Diagram Building (domain class, state machine, system sequence)"]
+    },
+    {
+        type: "course",
+        title: "Game Programming with Data Structures",
+        dates: "Fall 2022 Term",
+        skills: ["Visual Studio 2022", "C#", "MonoGame"]
+    },
+    {
+        type: "course",
+        title: "Programming: Microsoft Web Technologies",
+        dates: "Fall 2022 Term",
+        skills: ["Visual Studio 2022", "Microsoft SQL Server", "ASP.Net Core MVC", "C#"]
+    },
+    {
+        type: "course",
+        title: "Graphic Techniques for Illustration",
+        dates: "Fall 2022 Term",
+        skills: ["Adobe Photoshop", "Adobe Illustrator", "Perspective Line & Contour <br> Drawing", "Brush Techniques", "Texture, Effects, & Image <br> Manipulation", "Style Development"]
+    },
+    {
+        type: "course",
+        title: "Co-op and Career Preparation",
+        dates: "Fall 2022 Term",
+        skills: ["Resume & Cover Letter Writing", "Personal Branding", "Workplace Safety & Etiquette Knowledge", "Professionalism"]
+    },
+    //W22 ------------------------------------------------------
+    {
+        type: "course",
+        title: "Introduction to Data Modelling",
+        dates: "Winter 2022 Term",
+        skills: ["Microsoft Access (Queries & Forms)", "VBA", "Relational Database Creation", "Data Normalization"]
+    },
+    {
+        type: "course",
+        title: "Programming Concepts II",
+        dates: "Winter 2022 Term",
+        skills: ["C#", "Visual Studio 2022"]
     },
     {
         type: "course",
         title: "Programming Dynamic Websites",
         dates: "Winter 2022 Term",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
-    },
-    {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
-    },
-    {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
-    },
-    //temp
-    {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        skills: ["Visual Studio Code", "MongoDB", "EJS", "Node", "Express", "JavaScript"]
     },
     {
         type: "course",
-        title: "Programming Dynamic Websites",
+        title: "Mathematics for Information Technology II",
         dates: "Winter 2022 Term",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        skills: ["Sequences and Series", "Trigonometry", "Exponents and Logarithms", "Inequalities", "Statistics", "Probability", "Complex Numbers"]
     },
     {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        type: "course",
+        title: "Technology Infrastructure: Networking",
+        dates: "Winter 2022 Term",
+        skills: ["Cisco Packet Tracer", "Github"]
+    },
+    //F21 ------------------------------------------------------
+    {
+        type: "course",
+        title: "User Experience",
+        dates: "Fall 2021 Term",
+        skills: ["Justinmind (Prototyper)", "Use Case Diagrams & <br> Descriptions", "Entity Breakdowns", "Content Plans", "Revenue Stream Knowledge"]
     },
     {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        type: "course",
+        title: "Programming: Web Foundations",
+        dates: "Fall 2021 Term",
+        skills: ["Visual Studio Code", "HTML", "CSS"]
     },
     {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        type: "course",
+        title: "Programming Concepts I",
+        dates: "Fall 2021 Term",
+        skills: ["C#", "Visual Studio 2019"]
     },
     {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        type: "course",
+        title: "Mathematics for Information Technology I",
+        dates: "Fall 2021 Term",
+        skills: ["Sets", "Logic", "Boolean Algebra", "Linear Equations", "Data Structures", "Binary and Other Number <br> Systems", "Trees, Graphs, Paths, and <br> Circuits"]
     },
     {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
+        type: "course",
+        title: "College Reading & Writing Skills",
+        dates: "Fall 2021 Term",
+        skills: ["APA Citations", "Academic Research", "Essay Creation", "Sentence Writing"]
     },
-    {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
-    },
-    {
-        type: "job",
-        title: "Virtual and Augmented Reality Lab @ Conestoga",
-        dates: "Sept. 2023 - Aug. 2024",
-        skills: ["Unity", "Visual Studio", "C#", "Visual Studio Code", "React", "TypeScript"]
-    },
+    
+    
 ]
 
 
