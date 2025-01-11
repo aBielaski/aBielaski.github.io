@@ -44,14 +44,27 @@
             <img src="images/icons/location pink.png" />
             <p>Ontario, Canada</p>
         </div>
+
+        <!-- -------------------------- SCROLL SPEED --------------------------- -->
+        <label id="scrollBarsVisible">Enable horizontal scroll bars &nbsp;
+            <input type="checkbox" id="horizontalScrollCheckBox" class="focusHighlight">
+        </label>
+
+        <label id="scrollSpeedSection">Scroll Speed<br>
+            <button id="scrollSpeedDown" class="scrollSpeedButtons focusHighlight">&lt;</button>
+            &nbsp; <p id="scrollSpeedText">2</p> &nbsp;
+            <button id="scrollSpeedUp" class="scrollSpeedButtons focusHighlight">&gt;</button>
+        </label>
+        
     </header>
     
     <!-- -------------------------------- ABOUT ME ------------------------------- -->
     <div class="section" id="aboutMe">
         <button id="aboutMeScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
         <h3>ABOUT ME</h3>
-        <div class="sectionContent" id="aboutMeList"></div>
+        <div class="sectionContent scrollBar" id="aboutMeList"></div>
         <button id="aboutMeScrollRight" class="scrollBtns scrollRight">&gt;</button>
+        <p class="mobileScrollHint">&lt; scroll ></p>
     </div>
     
     <!-- -------------------------------- DESIGNS -------------------------------- -->
@@ -63,9 +76,10 @@
             <p>Click on an image to learn/see more!</p>
         </div>
         
-        <div class="sectionContent" id="designItems"></div>
+        <div class="sectionContent scrollBar" id="designItems"></div>
 
         <button id="designsScrollRight" class="scrollBtns scrollRight">&gt;</button>
+        <p class="mobileScrollHint">&lt; scroll ></p>
     </div>
 
     <!-- ------------------------------ PROGRAMMING ------------------------------ -->
@@ -77,17 +91,19 @@
             <p>Click on an image to learn/see more!</p>
         </div>
         
-        <div class="sectionContent" id="programItems"></div>
+        <div class="sectionContent scrollBar" id="programItems"></div>
 
         <button id="programsScrollRight" class="scrollBtns scrollRight">&gt;</button>
+        <p class="mobileScrollHint">&lt; scroll ></p>
     </div>
 
     <!-- ------------------------------ EXPERIENCE ------------------------------- -->
     <div class="section" id="experience">
         <button id="experienceScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
         <h3>RELEVANT EXPERIENCE / COURSES</h3>
-        <div class="sectionContent" id="experienceList"></div>
+        <div class="sectionContent scrollBar" id="experienceList"></div>
         <button id="experienceScrollRight" class="scrollBtns scrollRight">&gt;</button>
+        <p class="mobileScrollHint">&lt; scroll ></p>
     </div>
 
     <!-- -------------------------------- FOOTER --------------------------------- -->
@@ -99,7 +115,7 @@
     <div id="screenOverlay">
         <div id="popup">
             <div id="innerPopup">
-                <button id="closeBtn">X</button>
+                
                 <h5 id="popupTitle">title</h5>
 
                 <button id="popupCarouselLeft" class="carouselBtns carouselLeft">&lt;</button>
@@ -111,6 +127,7 @@
                     <p id="popupContentDescription">description</p>
                 </div>
 
+                <button id="closeBtn">X</button>
                 <!-- TODO: put expand button in bottom right for full screen (careful of mobile btns) --- fixed screen on red -->
                 
             </div>
@@ -131,214 +148,7 @@ Accessibility TODO:
 - contrast background
 - animation speed
 - font size changes?
+- create escape and left/right arrow key events for popup AND/OR figure out how to make focus in popup elements (for <p> scroll too)
+- focus outlines for all buttons
 
 -->
-
-
-
-
-
-
-<!--    DRAFT STUFF
-
-====================================================================================================================
-//====================================================================================================================
-//====================================================================================================================
-//====================================================================================================================
-//====================================================================================================================
-<nav>
-    <a href = "designs.html"> <div class="links"> Design Samples </div>  </a> 
-    <img id="profileImg" src="images/profilePicture.jpg">
-</nav>
-ePortfolioFavicon.png
---> 
-
-
-
-<!-- <img src="images/selkie1.png" />
-            <img src="images/dashboard.png" />
-            <img src="images/clothes1.png" />
-            <img src="images/fish1.png" />
-            <img src="images/Assign1_HealthDashboard2 copy.png" />
-            <img src="images/selkie14.png" />
-            <img src="images/dashboard.png" /> -->
-
-<!-- <div id="gap"></div> -->
-
-
-    <!-- header
-    <header>
-        <div> 
-            <img id="profileImg" src="images/profilePicture2.jpg">
-        </div>
-        <div id="headerBar"> 
-            <h1 id="siteTitle"></h1>
-        </div>
-        <nav id="nav"></nav>
-    </header>
-
-    <main>
-        <ul id="aboutMeList"></ul>
-    </main>
-
-    <footer>
-        <p id="siteFooter"></p>
-    </footer> -->
-
-
-
-        <!-- <button style="color:blue;" id="newScroll">Hello</button> -->
-
-
-    <!-- ---------------------------------------- -->
-    <!-- <div class="section" id="contactSection">
-        <h3>CONTACT</h3>
-        <input type="text" placeholder="Name" class="textInput"/> </br></br>
-        <input type="email" placeholder="Email" class="textInput"/> </br></br>
-        <textarea placeholder="Message" rows="4" id="contactMsg"></textarea> </br></br>
-        <button>Send</button>
-    </div> -->
-
-
-
-            <!-- <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div>
-    
-            <div>
-                <div class="circles">
-                    <img src="images/location pink.png" />
-                </div>
-                <p class="pinkText">Detail-Oriented</p>
-            </div> -->
-
-
-
-
-
-
-
-            <!-- <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="pinkText">VARLAB</h4>
-                <ul>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                    <li>Unity</li>
-                </ul>
-            </div> -->

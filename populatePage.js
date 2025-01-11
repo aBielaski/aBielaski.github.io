@@ -1,6 +1,15 @@
+/**
+TODO:
+
+*/
+
+
+
 //newDiv.setAttribute("tabindex", "0"); // Make it keyboard-focusable
-
-
+var scrollSpeed = 2;
+var scrollSmoothness = 10;
+var scrollSpeedMax = 10;
+var focusedElementBeforePopup;
 
 //--------------------------------------------------------------------------
 window.onload = function setInitialData() {
@@ -15,8 +24,88 @@ window.onload = function setInitialData() {
     document.getElementById("experienceList").scrollLeft = 0;
 
     document.getElementById("screenOverlay").style.visibility ="hidden";
+    setUpInputListeners();
+    setUpWindowSizeListener();
     setUpClickEventListeners();
     setUpScrollEventListeners();
+    
+}
+
+function setUpInputListeners() {
+    document.getElementById("horizontalScrollCheckBox").addEventListener("change", changeScrollBarVisibility);
+
+    document.getElementById("horizontalScrollCheckBox").addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            document.getElementById("horizontalScrollCheckBox").checked = !document.getElementById("horizontalScrollCheckBox").checked;
+            changeScrollBarVisibility();
+        }
+    });
+
+    function changeScrollBarVisibility() {
+        let checkedState = document.getElementById("horizontalScrollCheckBox").checked;
+        showScrollBars(checkedState);
+        hideOrDisplayClassArrayElements("scrollBtns", checkedState);
+        hideOrDisplayClassArrayElements("mobileScrollHint", !checkedState);
+    }
+}
+
+
+function setUpWindowSizeListener() {
+    const hasMouse = window.matchMedia("(pointer: fine) and (hover: hover)").matches;
+    
+    window.addEventListener("resize", adjustScrollBars);
+
+    //adjust scroll bars
+    function adjustScrollBars() {
+        if (window.innerWidth < 400 || !hasMouse) {
+            showScrollBars(true);
+
+            document.getElementById("scrollSpeedSection").style.display = "none";
+            hideOrDisplayClassArrayElements("scrollBtns", true);
+            hideOrDisplayClassArrayElements("mobileScrollHint", false);
+        } else {
+            showScrollBars(false);
+
+            document.getElementById("scrollSpeedSection").style.display = "block";
+            hideOrDisplayClassArrayElements("scrollBtns", false);
+            hideOrDisplayClassArrayElements("mobileScrollHint", true);
+
+        }
+    }
+
+    adjustScrollBars();
+}
+
+function hideOrDisplayClassArrayElements(className, hide) {
+    if (hide) {
+        Array.from(document.getElementsByClassName(className)).forEach(
+            function(element, index, array) {
+                element.style.display = "none";
+            }
+        );
+    } else {
+        Array.from(document.getElementsByClassName(className)).forEach(
+            function(element, index, array) {
+                element.style.display = "block";
+            }
+        );
+    }
+}
+
+function showScrollBars(show) {
+    if (show) {
+        document.getElementById("aboutMeList").style.overflowX = "auto";
+        document.getElementById("designItems").style.overflowX = "auto";
+        document.getElementById("programItems").style.overflowX = "auto";
+        document.getElementById("experienceList").style.overflowX = "auto";
+        document.getElementById("horizontalScrollCheckBox").checked = true;
+    } else {
+        document.getElementById("aboutMeList").style.overflowX = "hidden";
+        document.getElementById("designItems").style.overflowX = "hidden";
+        document.getElementById("programItems").style.overflowX = "hidden";
+        document.getElementById("experienceList").style.overflowX = "hidden";
+        document.getElementById("horizontalScrollCheckBox").checked = false;
+    }
 }
 
 
@@ -31,6 +120,8 @@ function setUpClickEventListeners() {
     Array.from(document.getElementsByClassName("clickable")).forEach(
         function(element, index, array) {
             element.addEventListener("click", function () {
+                focusedElementBeforePopup = document.activeElement;
+
                 designSamples.forEach(item => {
                     if (item.id === element.id) {
                         populatePopupWithImageDataClicked(item);
@@ -44,6 +135,7 @@ function setUpClickEventListeners() {
                 });
 
                 document.getElementById("screenOverlay").style.visibility ="visible";
+                document.getElementById("popupCarouselLeft").focus();
                 disableBackgroundScrollbarWhenPopupOpen(true);
             });
         }
@@ -57,21 +149,35 @@ function setUpClickEventListeners() {
         document.getElementById("popupCarouselRight").style.visibility ="hidden";
         //TODO: stop video playing
         disableBackgroundScrollbarWhenPopupOpen(false);
+        if (focusedElementBeforePopup) {
+            focusedElementBeforePopup.focus();
+        }
     });
 
-    //click popup left carousel btn
-    document.getElementById("popupCarouselLeft").addEventListener("click", function () {
-        rotateCarouselImages(false);
-    });
+    //click popup carousel btn
+    document.getElementById("popupCarouselLeft").addEventListener("click", function () {rotateCarouselImages(false);}); //left
+    document.getElementById("popupCarouselRight").addEventListener("click", function () {rotateCarouselImages(true);}); //right
 
-    //click popup right carousel btn
-    document.getElementById("popupCarouselRight").addEventListener("click", function () {
-        rotateCarouselImages(true);
-    });
+    //click scroll speed buttons
+    document.getElementById("scrollSpeedDown").addEventListener("click", function () {changeScrollSpeed(false);}); //left
+    document.getElementById("scrollSpeedUp").addEventListener("click", function () {changeScrollSpeed(true);}); //right
+
+    //------------------------------------------------------------------
+    //-----------------------------------------------------------------
+    function changeScrollSpeed(speedUp) {
+        if (!speedUp && scrollSpeed > 1) {
+            scrollSpeed--;
+        } else if (speedUp && scrollSpeed < scrollSpeedMax) {
+            scrollSpeed++;
+        }
+
+        document.getElementById("scrollSpeedText").innerHTML = scrollSpeed;
+    }
 
     //-------------------------------------------------------------------
     //-----------------------------------------------------------------
-    function populatePopupWithImageDataClicked(item) {
+    function populatePopupWithImageDataClicked(item) {                  
+        
         document.getElementById("popupTitle").innerHTML = item.title;
         document.getElementById("popupContentDescription").innerHTML = item.description;
         
@@ -86,6 +192,7 @@ function setUpClickEventListeners() {
             document.getElementById("popupCarouselLeft").style.visibility ="visible";
             document.getElementById("popupCarouselRight").style.visibility ="visible";
         }
+        
     }
 
     //------------------------------------------------------------------
@@ -137,13 +244,6 @@ function setUpClickEventListeners() {
         document.getElementById("pictureArea").appendChild(attachment);
     }
 
-    /**
- <video controls width="1200px" poster="images/rocket.png">
-    <source src="videos/rocket2.mp4" type="video/mp4">
-    <p>Sorry, this browser does not support videos.</p>
-</video>
- */
-
     //-----------------------------------------------------------------
     //-----------------------------------------------------------------
     function disableBackgroundScrollbarWhenPopupOpen(popupOpen) {
@@ -160,6 +260,7 @@ function setUpClickEventListeners() {
 //---------------------------------SCROLL-----------------------------------------
 //================================================================================
 function setUpScrollEventListeners() {
+
     const scrollList = [
         {buttonId: "aboutMeScrollRight", scrollDiv: "aboutMeList", direction: "right", sectionName: "aboutMe"},
         {buttonId: "aboutMeScrollLeft", scrollDiv: "aboutMeList", direction: "left", sectionName: "aboutMe"},
@@ -185,24 +286,39 @@ function setUpScrollEventListeners() {
         btnName.addEventListener("mouseout", stopScrolling);
     });
 
-    //mobile touch events  ---------------mousedown & mouseup events -------TODO: fix bug when at end points
-    scrollList.forEach(btn => {
-        let btnName = document.getElementById(btn.buttonId);
-        btnName.addEventListener("ontouchstart", function(){ startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); });
-        btnName.addEventListener("ontouchend", stopScrolling);
-    });
+    // //mobile touch events  ---------------mousedown & mouseup events -------TODO: fix bug when at end points
+    // scrollList.forEach(btn => {
+    //     let btnName = document.getElementById(btn.buttonId);
+    //     btnName.addEventListener("touchstart", function(){ startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); });
+    //     btnName.addEventListener("touchend", stopScrolling);
+    // });
+
+    // //enter button
+    // scrollList.forEach(btn => {
+    //     let btnName = document.getElementById(btn.buttonId);
+    //     btnName.addEventListener("keydown", function(event){ 
+    //         if (event.key === "Enter") {
+    //             startScrolling(btn.scrollDiv, btn.direction, btn.sectionName); 
+    //         }
+    //     });
+    //     btnName.addEventListener("keyup", function(event){ 
+    //         if (event.key === "Enter") {
+    //             stopScrolling();
+    //         }
+    //     });
+    // });
    
     //helper functions to remove code duplication
     function startScrolling(scrollDiv, direction, sectionName) {
         scrollInterval = setInterval(() => {
             if (direction === "left") {
-                document.getElementById(scrollDiv).scrollLeft -= 2; //speed
+                document.getElementById(scrollDiv).scrollLeft -= scrollSpeed; //speed
                 hideScrollButtonIfAtEndPoints(scrollDiv, sectionName);
             } else if (direction === "right") {
-                document.getElementById(scrollDiv).scrollLeft += 2; //speed
+                document.getElementById(scrollDiv).scrollLeft += scrollSpeed; //speed
                 hideScrollButtonIfAtEndPoints(scrollDiv, sectionName);
             } 
-        }, 5); //smoothness
+        }, scrollSmoothness);
     }
 
     function stopScrolling() {
@@ -263,24 +379,30 @@ function populateAboutMeSection() {
 function populateDesignSection() {
     let designItems = document.getElementById("designItems");
     designSamples.forEach(item => {
+        let buttonElement = document.createElement("button");
+        buttonElement.setAttribute("class", "imgBtn clickable");
+        buttonElement.id = item.id;
+
         let imageElement = document.createElement("img");
         imageElement.src = item.displayImagePath;
-        imageElement.setAttribute("class", "clickable");
-        imageElement.id = item.id;
 
-        designItems.appendChild(imageElement);
+        buttonElement.appendChild(imageElement);
+        designItems.appendChild(buttonElement);
     });
 }
 
 function populateProgrammingSection() {
     let programItems = document.getElementById("programItems");
     programmingSamples.forEach(item => {
+        let buttonElement = document.createElement("button");
+        buttonElement.setAttribute("class", "imgBtn clickable");
+        buttonElement.id = item.id;
+
         let imageElement = document.createElement("img");
         imageElement.src = item.displayImagePath;
-        imageElement.setAttribute("class", "clickable");
-        imageElement.id = item.id;
 
-        programItems.appendChild(imageElement);
+        buttonElement.appendChild(imageElement);
+        programItems.appendChild(buttonElement);
     });
 }
 
@@ -330,56 +452,3 @@ function populateExperienceSection() {
 //====================================================================================================================
 
 
-                // if (document.getElementById(rowId).scrollLeft === 0) {
-                //     document.getElementById("aboutMeScrollLeft").visibility = "hidden";
-                //     console.log("true");
-                //     //document.getElementById("aboutMeScrollLeft").classList.add("hidden");
-                // }
-
-                //let oldPos = document.getElementById("aboutMeScrollRight").offsetLeft;
-
-                //let newPos = document.getElementById("aboutMeScrollRight").offsetLeft;
-
-                //const rect = document.getElementById("aboutMeList").getBoundingClientRect();
-                //console.log(`X: ${rect.left}, Y: ${rect.top}`);
-
-                //console.log(document.getElementById("aboutMeList").offsetLeft);
-
-                // if (oldPos === newPos) {
-                //     document.getElementById("aboutMeScrollRight").visibility = "hidden";
-                //     console.log("true");
-                // }
-
-
-    // document.getElementsByClassName("clickable").
-    // document.getElementById("testImg").addEventListener("click", function () {
-    //     document.getElementById("screenOverlay").style.visibility ="visible";
-    // });
-
-
-
-    // document.getElementById("scrollDiv").addEventListener("mousemove", function() {
-    //     // alert("Hello, this is an event listener!");
-    //     document.getElementById("aboutMeList").scrollLeft += 20;
-    // });
-
-
-
-        //set website title/header & footer
-    //document.getElementById("siteTitle").innerHTML = siteTitle;
-    //setNavigationLinks();
-
-
-
-
-    // //about me scroll section
-    // document.getElementById("aboutMeScrollRight").addEventListener("mouseover", function(){ startScrolling("aboutMeList", "right"); });
-    // document.getElementById("aboutMeScrollRight").addEventListener("mouseout", stopScrolling);
-    // document.getElementById("aboutMeScrollLeft").addEventListener("mouseover", function(){ startScrolling("aboutMeList", "left"); });
-    // document.getElementById("aboutMeScrollLeft").addEventListener("mouseout", stopScrolling);
-
-    // //designs scroll section
-    // document.getElementById("designsScrollRight").addEventListener("mouseover", function(){ startScrolling("designItems", "right"); });
-    // document.getElementById("designsScrollRight").addEventListener("mouseout", stopScrolling);
-    // document.getElementById("designsScrollLeft").addEventListener("mouseover", function(){ startScrolling("designItems", "left"); });
-    // document.getElementById("designsScrollLeft").addEventListener("mouseout", stopScrolling);
