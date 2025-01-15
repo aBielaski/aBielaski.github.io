@@ -175,6 +175,23 @@ const programmingSamples = [
         <br> [Course: Game & Data Structures; Created Via: Visual Studio & MonoGame]`, 
     },
     {
+        id: "asp",
+        title: "Medical Clinic Web Application", 
+        displayImagePath: "images/programs/asp/asp_DisplayImg.PNG",
+        imagePaths: ["images/programs/asp/asp1.png", "images/programs/asp/asp2.PNG", "images/programs/asp/asp3.PNG", "images/programs/asp/asp4.PNG", "images/programs/asp/asp5.PNG", 
+            "images/programs/asp/asp6.PNG", "images/programs/asp/asp7.PNG", "images/programs/asp/asp8.PNG", "images/programs/asp/asp9.PNG", "images/programs/asp/asp10.PNG", 
+            "images/programs/asp/asp11.PNG", "images/programs/asp/asp12.PNG"
+        ], 
+        description: `In this term-long project, I built an ASP.NET Core MVC solution utilizing C#, Entity Framework, and Microsoft SQL Server to manage medical data for a clinic. I started with setting up 
+        dependency injection, generating controllers with CRUD (Create, Read, Update, and Delete) support, and editing page headers in the views for clarity. Following this, I implemented persistence techniques 
+        such as asp routing with parameters, cookies/sessions, and ViewBag/ViewData to pass information across different views. Advanced filtering was conducted to access information from other relational tables, 
+        and then sorting methods were applied to order data ascendingly. Furthermore, a metadata class was added for the Patient model so annotations could be applied to change the table field display names and 
+        update date formats. A self-validating model was also employed by creating a like-named partial class with the IValidatableObject interface. In the Validate method, several checks were performed using 
+        string utility methods, regex checks, and custom static validation methods that I created in a separate class library. Any ModelState validation errors or try-catch base exceptions were then presented to 
+        the user via TempData messages with their initial inputs to be corrected.
+        <br> [Course: Programming: Microsoft Web Technologies; Created Via: Visual Studio]`, 
+    },
+    {
         id: "travel",
         title: "Group Travel Organizer Mobile App", 
         displayImagePath: "images/programs/travel/travelDisplay.png",
@@ -198,7 +215,7 @@ const programmingSamples = [
             "images/programs/abasts/abasts11.png", "images/programs/abasts/abasts12.png", "images/programs/abasts/abasts13.png", "images/programs/abasts/abasts14.png", "images/programs/abasts/abasts15.png", 
             "images/programs/abasts/abasts16.png", "images/programs/abasts/abasts17.png", "images/programs/abasts/abasts18.png", "images/programs/abasts/abasts19.png"
         ], 
-        description: `In this term-long project, my team and I built a website for a computer programming club using Java Web Technologies with the NetBeans IDE. Users are able to register, view, edit, or 
+        description: `Throughout the course semester, my team and I built a website for a computer programming club using Java Web Technologies with the NetBeans IDE. Users are able to register, view, edit, or 
         remove members, and any changes are reflected in the MySQL database. They can also reserve books on loan which then adds them to their eCart and updates the quantity on hand. By the end of the term, 
         we had demonstrated an understanding of HTTP request and response, ServletContext, doGet/doPost, Java Server Pages (JSP’s), Java Server Pages Standard Tag Library (JSTL), expression language (EL), 
         input validation, error handling, JavaBeans, Java Database Connectivity (JDBC), sessions, Junit testing, and the Model-View-Controller pattern (MVC).

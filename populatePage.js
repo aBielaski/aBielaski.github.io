@@ -46,6 +46,11 @@ function setUpInputListeners() {
         showScrollBars(checkedState);
         hideOrDisplayClassArrayElements("scrollBtns", checkedState);
         hideOrDisplayClassArrayElements("mobileScrollHint", !checkedState);
+
+        if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
+            let display = checkedState ? "none" : "block";
+            document.getElementById("scrollSpeedSection").style.display = display;
+        }
     }
 }
 
@@ -61,12 +66,14 @@ function setUpWindowSizeListener() {
             showScrollBars(true);
 
             document.getElementById("scrollSpeedSection").style.display = "none";
+            document.getElementById("scrollBarsVisible").style.display = "none";
             hideOrDisplayClassArrayElements("scrollBtns", true);
             hideOrDisplayClassArrayElements("mobileScrollHint", false);
         } else {
             showScrollBars(false);
 
             document.getElementById("scrollSpeedSection").style.display = "block";
+            document.getElementById("scrollBarsVisible").style.display = "block";
             hideOrDisplayClassArrayElements("scrollBtns", false);
             hideOrDisplayClassArrayElements("mobileScrollHint", true);
 
@@ -385,6 +392,7 @@ function populateDesignSection() {
 
         let imageElement = document.createElement("img");
         imageElement.src = item.displayImagePath;
+        imageElement.alt = "#";
 
         buttonElement.appendChild(imageElement);
         designItems.appendChild(buttonElement);
@@ -400,6 +408,7 @@ function populateProgrammingSection() {
 
         let imageElement = document.createElement("img");
         imageElement.src = item.displayImagePath;
+        imageElement.alt = "#";
 
         buttonElement.appendChild(imageElement);
         programItems.appendChild(buttonElement);
