@@ -80,6 +80,19 @@ const designSamples = [
         <br> [Course: User Experience; Tools Used: Justinmind Prototyper Application]`, 
     }, 
     {
+        id: "eco",
+        title: "Environmental Sustainability Website/Portal", 
+        displayImagePath: "images/designs/eco/Proto.png",
+        imagePaths: ["images/designs/eco/Proto.png", "images/designs/eco/WF.png", 
+        ], 
+        description: `For our marketing class, my group of three went through the design process and presented our ideas for an Environmental Sustainability Website/Portal project. 
+        After empathizing, defining, ideating, and screening our initial thoughts during the brainstorming session, we began evaluating our target audience with personas, finalizing 
+        features, and creating our brand identity. One of my teammates came up with the basic structure in the wireframe presented, and I designed the final aesthetics for the prototype, 
+        focusing on clarity, consistency, and completeness. I added a tree banner to the top to immerse users in the topic at hand, and white backgrounds to keep the overall feel clean, crisp, 
+        and modern. The off-white colour behind the panels helps to defuse brightness so it’s easier on the eyes, and a few different green colours were incorporated to maintain consistency and interest.
+        <br> [Course: Marketing for the IT Industry; Tools Used: Figma]`, 
+    },
+    {
         id: "parent",
         title: "Converse to Thrive: Parenting Mobile App Design", 
         displayImagePath: "images/designs/parent/parentDisplayImage.png",
@@ -114,15 +127,7 @@ const designSamples = [
         assignment).
         <br> [Course: Digital Motion and Sound; Tools Used: Blender 4.2]`, 
     },
-    // {
-    //     id: "",
-    //     title: "", 
-    //     displayImagePath: "images/designs//",
-    //     imagePaths: ["images/designs//", 
-    //     ], 
-    //     description: `
-    //     <br> [Course: ; Tools Used: ]`, 
-    // },
+    
     // {
     //     id: "",
     //     title: "", 
@@ -155,9 +160,9 @@ const programmingSamples = [
             "images/programs/movie/movie10.png"
         ], 
         description: `In this mobile application, Firebase is used to authenticate users as they login or register new accounts, and store their favourite movies list. In the first navigation 
-        tab, users can enter a search input which will retrieve applicable movies from the OMDB public API database and show the results in a RecyclerView.  When the user clicks a movie in the 
-        list, it will display further details in a new activity/page and allow them to add it to their favourites list.  In the favourites navigation tab, they can do the same thing, but they 
-        also have the option to update the movie description there, or delete it from their list.  This project was cumulative in nature to reflect the learning of the MVVM (model-view-viewmodel) 
+        tab, users can enter a search input which will retrieve applicable movies from the OMDB public API database and show the results in a RecyclerView. When the user clicks a movie in the 
+        list, it will display further details in a new activity/page and allow them to add it to their favourites list. In the favourites navigation tab, they can do the same thing, but they 
+        also have the option to update the movie description there, or delete it from their list. This project was cumulative in nature to reflect the learning of the MVVM (model-view-viewmodel) 
         architecture, LiveData, view binding, click listeners, fragments, custom xml UI layouts, clean folder organization, java code, and much more.
         <br> [Course: Programming: Mobile Applications II; Created Via: Android Studio & Firebase]`, 
     },
@@ -173,6 +178,21 @@ const programmingSamples = [
         assets, sound effects, a dynamic background, keyboard controls, levels, animations, text, and scoring. Code quality was also a high priority with well-structured classes (constructor, initialize, 
         load, update, and draw methods) for various game aspects, thorough commenting, adherence to programming standards, and efficient performance in a frames-per-second environment.
         <br> [Course: Game & Data Structures; Created Via: Visual Studio & MonoGame]`, 
+    },
+    {
+        id: "shiloh",
+        title: "Shiloh Boards Digital Application", 
+        displayImagePath: "images/programs/shiloh/displayImg.png",
+        imagePaths: ["images/programs/shiloh/1.png", "images/programs/shiloh/2.png", "images/programs/shiloh/3.png", "images/programs/shiloh/4.png", "images/programs/shiloh/5.png",
+            "images/programs/shiloh/6.png", "images/programs/shiloh/7.png", "images/programs/shiloh/8.png", "images/programs/shiloh/9.png", "images/programs/shiloh/10.png", "images/programs/shiloh/10-5.png", 
+            "images/programs/shiloh/11.png", "images/programs/shiloh/12.png", "images/programs/shiloh/13.png", "images/programs/shiloh/14.png", "images/programs/shiloh/15.png", 
+        ], 
+        description: `In our final capstone course, my team of three created a digital application for our Shiloh Boards client to supplement the learning value of their physical boards which teach young kids 
+        the alphabet, phonetics, and counting up to the number 20. Level 1 was modelled off the boards directly with the doors, and level 2 and 3 were added for children who feel ready to advance to more difficult, randomized 
+        questions. We designed the prototypes to match with their current branding, and followed guidelines to keep the colours muted to prevent overstimulation. For my contribution, I programmed all the pages 
+        displayed above with React Native on the front end and utilized EXPO cross-platform development to ensure that the application could be deployed on Android, Web, and iOS devices. As a result of our hard 
+        work, we were awarded a “Runner Up” certificate for our program.
+        <br> [Course: Design Project; Created Via: Visual Studio Code, React Native, EXPO, & Figma]`, 
     },
     {
         id: "asp",
@@ -222,6 +242,19 @@ const programmingSamples = [
         <br> [Course: Programming: JAVA Web Technologies; Created Via: NetBeans]`, 
     },
     {
+        id: "laundry",
+        title: "The Home Hamper", 
+        displayImagePath: "images/programs/laundry/2.jpg",
+        imagePaths: ["videos/homeHamperDemo.mp4", "images/programs/laundry/1.jpg", "images/programs/laundry/2.jpg", "images/programs/laundry/3.png", "images/programs/laundry/4.png", "images/programs/laundry/5.png",
+            "images/programs/laundry/6.png", "images/programs/laundry/7.png", "images/programs/laundry/8.png", "images/programs/laundry/9.png"
+        ], 
+        description: `Throughout the term, I designed and programmed a 3D simulation game in Unity with two levels. The goal for young children is to complete laundry tasks (such as sorting clothes into coloured 
+        bins or spraying stains) within a time limit in a home environment. For the assets I needed the player to interact with, I created them in Blender so I could animate them appropriately. The player has a 
+        rigidbody attached to simulate physics and prevent walking through walls, and several scripts represent objects within the scene and control their functionality. There are also many panels for the heads-up 
+        display and menu, which are switchable via a script manager. Finally, post-processing filters were applied to give it a cartoon-like feel.
+        <br> [Course: Game and Simulation Design; Created Via: Unity, C#, & Blender]`, 
+    },
+    {
         id: "mongoEJSNode",
         title: "Online Store Web Application", 
         displayImagePath: "images/programs/mongo/clothing1.png",
@@ -244,6 +277,37 @@ const programmingSamples = [
 ];
 
 const experience = [
+    //W25 ------------------------------------------------------
+    {
+        type: "course",
+        title: "Design Project",
+        dates: "Winter 2025 Term",
+        skills: ["Project Management", "Iteration Planning & Backlogs", "React Native", "EXPO Cross-Platform Development", "Figma", "Design Diagrams", "User & Unit Test Plans"]
+    },
+    {
+        type: "course",
+        title: "Security for Software Design",
+        dates: "Winter 2025 Term",
+        skills: ["Core Security Principles (CIA Triad, etc.)", "STRIDE Threat Modelling & DREAD Risk Rating", "OWASP Top 10", "SQL Injection, Cross-Site Scripting (XSS), & XML External Entity (XXE) Attacks", "Hashing & Encryption"] //Misuse diagrams, SDLC Security Integration
+    },
+    {
+        type: "course",
+        title: "Marketing for the IT Industry",
+        dates: "Winter 2025 Term",
+        skills: ["Branding & Competitive Advantages", "Design Thinking Process", "Product Life Cycle", "Search Engine Optimization", "Market Segmentation & Target Audiences", "Social Media & Online Etiquette"] //Contextual & affiliate advertising, Gartner Hyper Cycle, reputation, brand resonance, email marketing, marketing plans, 
+    },
+    {
+        type: "course",
+        title: "Game and Simulation Design",
+        dates: "Winter 2025 Term",
+        skills: ["Unity/ C# Scripts", "Heads Up Displays & Menu Interface Designs", "Animations", "Terrain & Environment Building", "Physics and Interactions", "Player Controllers"] //, "Post-Processing Filters", , Creative Aspects (genre, perspective, market research, revenue streams, ), , "Cursor Events"
+    },
+    {
+        type: "course",
+        title: "Architecture for Emerging Technologies",
+        dates: "Winter 2025 Term",
+        skills: ["Blockchain", "Cloud Computing", "Virtualization", "Internet of Things (IoT)", "Other Disruptive/ Emerging Technologies (AI, VR/AR, etc.)", "Privacy, Legal, & Ethical Challenges"]
+    },
     //F24 ------------------------------------------------------
     {
         type: "course",
@@ -261,13 +325,13 @@ const experience = [
         type: "course",
         title: "Data Science and Visualization",
         dates: "Fall 2024 Term",
-        skills: ["Power BI", "Tableau", "Dashboard Design", "Data Cleaning", "Kafka"]
+        skills: ["Power BI", "Tableau", "Dashboard Design", "Data Cleaning", "Kafka", "Big Data"]
     },
     {
         type: "course",
         title: "The Emerging Interface",
         dates: "Fall 2024 Term",
-        skills: ["Figma", "Accessibility", "Web & Mobile Designs", "Persona Research"]
+        skills: ["Figma", "Accessibility", "Web & Mobile Designs", "Persona Research", "Gestalt Design Principles"]
     },
     {
         type: "course",
