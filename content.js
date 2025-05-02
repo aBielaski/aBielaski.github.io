@@ -182,10 +182,10 @@ const programmingSamples = [
     {
         id: "shiloh",
         title: "Shiloh Boards Digital Application", 
-        displayImagePath: "images/programs/shiloh/displayImg.PNG",
-        imagePaths: ["images/programs/shiloh/1.PNG", "images/programs/shiloh/2.PNG", "images/programs/shiloh/3.PNG", "images/programs/shiloh/4.PNG", "images/programs/shiloh/5.PNG",
-            "images/programs/shiloh/6.PNG", "images/programs/shiloh/7.PNG", "images/programs/shiloh/8.PNG", "images/programs/shiloh/9.PNG", "images/programs/shiloh/10.PNG", "images/programs/shiloh/10-5.PNG", 
-            "images/programs/shiloh/11.PNG", "images/programs/shiloh/12.PNG", "images/programs/shiloh/13.PNG", "images/programs/shiloh/14.PNG", "images/programs/shiloh/15.PNG", 
+        displayImagePath: "images/programs/shiloh/shilohdisplayImg.PNG",
+        imagePaths: ["images/programs/shiloh/shiloh1.PNG", "images/programs/shiloh/shiloh2.PNG", "images/programs/shiloh/shiloh3.PNG", "images/programs/shiloh/shiloh4.PNG", "images/programs/shiloh/shiloh5.PNG",
+            "images/programs/shiloh/shiloh6.PNG", "images/programs/shiloh/shiloh7.PNG", "images/programs/shiloh/shiloh8.PNG", "images/programs/shiloh/shiloh9.PNG", "images/programs/shiloh/shiloh10.PNG", "images/programs/shiloh/shiloh10-5.PNG", 
+            "images/programs/shiloh/shiloh11.PNG", "images/programs/shiloh/shiloh12.PNG", "images/programs/shiloh/shiloh13.PNG", "images/programs/shiloh/shiloh14.PNG", "images/programs/shiloh/shiloh15.PNG", 
         ], 
         description: `In our final capstone course, my team of three created a digital application for our Shiloh Boards client to supplement the learning value of their physical boards which teach young kids 
         the alphabet, phonetics, and counting up to the number 20. Level 1 was modelled off the boards directly with the doors, and level 2 and 3 were added for children who feel ready to advance to more difficult, randomized 
@@ -245,8 +245,8 @@ const programmingSamples = [
         id: "laundry",
         title: "The Home Hamper", 
         displayImagePath: "images/programs/laundry/2.jpg",
-        imagePaths: ["videos/homeHamperDemo.mp4", "images/programs/laundry/1.jpg", "images/programs/laundry/2.jpg", "images/programs/laundry/3.PNG", "images/programs/laundry/4.PNG", "images/programs/laundry/5.PNG",
-            "images/programs/laundry/6.PNG", "images/programs/laundry/7.PNG", "images/programs/laundry/8.PNG", "images/programs/laundry/9.PNG"
+        imagePaths: ["videos/homeHamperDemo.mp4", "images/programs/laundry/1.jpg", "images/programs/laundry/2.jpg", "images/programs/laundry/laundry3.PNG", "images/programs/laundry/laundry4.PNG", "images/programs/laundry/laundry5.PNG",
+            "images/programs/laundry/laundry6.PNG", "images/programs/laundry/laundry7.PNG", "images/programs/laundry/laundry8.PNG", "images/programs/laundry/laundry9.PNG"
         ], 
         description: `Throughout the term, I designed and programmed a 3D simulation game in Unity with two levels. The goal for young children is to complete laundry tasks (such as sorting clothes into coloured 
         bins or spraying stains) within a time limit in a home environment. For the assets I needed the player to interact with, I created them in Blender so I could animate them appropriately. The player has a 
