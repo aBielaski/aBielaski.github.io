@@ -59,7 +59,9 @@ const designSamples = [
         id: "music",
         title: "Emersion: Music Mobile App Design", 
         displayImagePath: "images/designs/music/musicDisplayImage.png",
-        imagePaths: ["images/designs/music/musicDisplayImage.png", "images/designs/music/music1.png", "images/designs/music/music2.png", "images/designs/music/music3.png", ], 
+        imagePaths: ["images/designs/music/musicDisplayImage.png", "images/designs/music/music1.png", "images/designs/music/music2.png", "images/designs/music/music3.png", 
+            "images/designs/music/WebHomeDesign.png", "images/designs/music/WebPlayerDesign.png", "images/designs/music/Wireframes.PNG",  
+        ], 
         description: `For this assignment, we were given the music category and a few requirements for the pages, then tasked with creating a unique design for it. I chose a piano
         theme for the most part and went with black and white colours mainly, used music notes for the navigation tabs, a music sheet for the song lyrics, and piano keys to align 
         the app title lettering. There were also accessibility considerations such as good contrast, additional indicators besides colour for selected items, and the ability to stop
