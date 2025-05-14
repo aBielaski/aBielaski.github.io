@@ -353,7 +353,7 @@ const experience = [
         type: "course",
         title: "Software Quality and Usability",
         dates: "Winter 2023 Term",
-        skills: ["Katalon", "Jest", "Agile Workflow", "Code Quality"]
+        skills: ["Katalon", "Jest", "Agile Workflow", "Code Quality", "Usability Test Plans"]
     },
     {
         type: "course",
