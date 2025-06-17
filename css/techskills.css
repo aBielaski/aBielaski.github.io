@@ -1,0 +1,83 @@
+#techSkills > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    /* gap: 4%; */
+    max-width: 78%;
+    margin: auto;
+}
+
+/* each category box */
+#techSkills > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#techSkills ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+/* #techSkills li {
+
+} */
+
+#techSkills h4 {
+    opacity: 0;
+    animation: fadeUp 3s ease-out forwards;
+}
+
+#techSkills span {
+    display: inline-block;
+    padding: 5px 15px;
+    border-bottom: 1px solid rgba(252, 97, 107, 0.35);
+    opacity: 0;
+    /* transform: translateY(20px); */
+    animation: fadeUp 3s ease-out forwards;
+}
+
+#techSkills li:last-child span {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* responsiveness ---------------------------- */
+@media screen and (max-width: 1550px) {
+    #techSkills > div {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #techSkills > div {
+        max-width: 95%;
+    }
+    #techSkills span {
+        font-size: clamp(12px, 1.6vw, 16px);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #techSkills > div {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 95%;
+    }
+    #techSkills span {
+        font-size: clamp(12px, 3vw, 16px);
+        padding-block: 3px;
+    }
+}
+
+/* animations */
+@keyframes fadeUp {
+    to {
+      opacity: 1;
+      /* transform: translateY(0); */
+    }
+}
+
+

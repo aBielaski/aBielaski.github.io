@@ -14,11 +14,15 @@
       sizes="1226x1094"
       href="images/Logo.png"
     />
-    <title> ePortfolio - Allison Bielaski </title>
+    <title> Allison Bielaski - ePortfolio </title>
 
     <!--style sheets-->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/strengths.css">
+    <link rel="stylesheet" href="css/techskills.css">
+    <link rel="stylesheet" href="css/experience.css">
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,131 +32,66 @@
 
     <!-- JS files -->
     <script src="content.js"></script>
-    <script src="populatePage.js"></script>
-
+    <script src="populateNavAndFooter.js" defer></script>
+    <script src="populateHomePage.js" defer></script>
 </head>
 
-<!----------------------------------------Web Page--------------------------------------------->
-<body>
-    <header class="section">
-        <!-- ----------------------------- HEADER ----------------------------- -->
-        <h1 id="h1">ALLISON BIELASKI</h1>
-        <h2>PROGRAMMER & UX/UI DESIGNER</h2>
+<body id="homePage">
+    <!-- ---------------------------- NAVIGATION HEADER ----------------------------- -->
+    <nav>
+        <img src="images/Logo.png" alt="red circle logo of initials A.B."/>
 
-        <!-- ---------------------------- LOCATION ----------------------------- -->
-        <div id="locationDiv">
-            <img src="images/icons/location pink.png" />
-            <p>Ontario, Canada</p>
+        <!-- nav items -->
+        <ul class="headerFont"> 
+
+        </ul>
+    </nav>
+
+    <!-- ------------------------------- MAIN BANNER -------------------------------- -->
+    <header id="myBanner">
+        <div class="sectionPadding">
+            <h1 class="headerFont"></h1>
+            <h2 class="headerFont"></h2>
+            <p></p>
         </div>
-
-        <!-- -------------------------- SCROLL SPEED --------------------------- -->
-        <label id="scrollBarsVisible">Enable horizontal scroll bars &nbsp;
-            <input type="checkbox" id="horizontalScrollCheckBox" class="focusHighlight">
-        </label>
-
-        <label id="scrollSpeedSection">Scroll Speed<br>
-            <button id="scrollSpeedDown" class="scrollSpeedButtons focusHighlight">&lt;</button>
-            &nbsp; <p id="scrollSpeedText">2</p> &nbsp;
-            <button id="scrollSpeedUp" class="scrollSpeedButtons focusHighlight">&gt;</button>
-        </label>
-        
+        <img src="images/imgOfMe.png" alt="black silhouette profile picture"/>
     </header>
-    
-    <!-- -------------------------------- ABOUT ME ------------------------------- -->
-    <div class="section" id="aboutMe">
-        <button id="aboutMeScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
-        <h3>ABOUT ME</h3>
-        <div class="sectionContent scrollBar" id="aboutMeList"></div>
-        <button id="aboutMeScrollRight" class="scrollBtns scrollRight">&gt;</button>
-        <p class="mobileScrollHint">&lt; scroll ></p>
-    </div>
-    
-    <!-- -------------------------------- DESIGNS -------------------------------- -->
-    <div class="section" id="designs">
-        <button id="designsScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
 
-        <div class="clickInstructionsAndTitle">
-            <h3>DESIGN PROTOTYPES / ART SAMPLES</h3>
-            <p>Click on an image to learn/see more!</p>
+     <!-- -------------------------- ABOUT ME / STRENGTHS --------------------------- -->
+    <section id="aboutMe" class="sectionPadding">
+        <h3 class="headerFont">STRENGTHS</h3>
+        <ul>
+            
+        </ul>
+    </section>
+
+    <!-- ------------------------------- TECH SKILLS -------------------------------- -->
+    <section id="techSkills" class="sectionPadding pinkGlowBorderOnBlack">
+        <h3 class="headerFont">TECHNICAL SKILLS</h3>
+        <div>
+            
         </div>
-        
-        <div class="sectionContent scrollBar" id="designItems"></div>
+    </section>
 
-        <button id="designsScrollRight" class="scrollBtns scrollRight">&gt;</button>
-        <p class="mobileScrollHint">&lt; scroll ></p>
-    </div>
-
-    <!-- ------------------------------ PROGRAMMING ------------------------------ -->
-    <div class="section" id="programs">
-        <button id="programsScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
-
-        <div class="clickInstructionsAndTitle">
-            <h3>PROGRAMMING SAMPLES</h3>
-            <p>Click on an image to learn/see more!</p>
+    <!-- ------------------------------- EXPERIENCE -------------------------------- -->
+    <section id="experience" class="sectionPadding">
+        <h3 class="headerFont">RELEVANT EXPERIENCE / COURSES</h3>
+        <div>
+            <img src="images/icons/diploma.png" alt="diploma scroll" />
+            <h4></h4>
         </div>
-        
-        <div class="sectionContent scrollBar" id="programItems"></div>
+        <ul>
+            
+        </ul>
+    </section>
 
-        <button id="programsScrollRight" class="scrollBtns scrollRight">&gt;</button>
-        <p class="mobileScrollHint">&lt; scroll ></p>
-    </div>
+    <!-- scroll to top btn -->
+    <button id="scrollBtn" class="scroll-to-top">↑</button>
 
-    <!-- ------------------------------ EXPERIENCE ------------------------------- -->
-    <div class="section" id="experience">
-        <button id="experienceScrollLeft" class="scrollBtns scrollLeft">&lt;</button>
-        <h3>RELEVANT EXPERIENCE / COURSES</h3>
-        <div class="sectionContent scrollBar" id="experienceList"></div>
-        <button id="experienceScrollRight" class="scrollBtns scrollRight">&gt;</button>
-        <p class="mobileScrollHint">&lt; scroll ></p>
-    </div>
-
-    <!-- -------------------------------- FOOTER --------------------------------- -->
+    <!-- --------------------------------- FOOTER ---------------------------------- -->
     <footer>
-        <p id="siteFooter"></p>
-        <a href="https://www.linkedin.com/in/allison-bielaski-programmer-designer">
-            <img src="images/icons/linkedIn.png">
-        </a>
-        
+
     </footer>
-
-    <!-- -------------------------------- POPUP ---------------------------------- -->
-    <div id="screenOverlay">
-        <div id="popup">
-            <div id="innerPopup">
-                
-                <h5 id="popupTitle">title</h5>
-
-                <button id="popupCarouselLeft" class="carouselBtns carouselLeft">&lt;</button>
-                <button id="popupCarouselRight" class="carouselBtns carouselRight">&gt;</button>
-
-                <div id="popupContent">
-                    <div id="pictureArea"></div>
-                    
-                    <p id="popupContentDescription">description</p>
-                </div>
-
-                <button id="closeBtn">X</button>
-                <!-- TODO: put expand button in bottom right for full screen (careful of mobile btns) --- fixed screen on red -->
-                
-            </div>
-        </div>
-    </div>
-
     
 </body>
 </html>
-
-
-<!-- 
-Accessibility TODO:
-- add alt tags
-- simpler font option
-- add tab indexing for images / keyboard functionality for everything
-- mobile way to start arrows
-- contrast background
-- animation speed
-- font size changes?
-- create escape and left/right arrow key events for popup AND/OR figure out how to make focus in popup elements (for <p> scroll too)
-- focus outlines for all buttons
-
--->

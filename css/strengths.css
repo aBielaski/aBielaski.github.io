@@ -1,0 +1,85 @@
+/* --------------about me--------------------    border: 1px solid yellowgreen; */
+
+#aboutMe ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-inline: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+#aboutMe li {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* circles */
+#aboutMe div {
+    background-color: #322d30;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(50% at 50% 50%);
+    margin: 15px;
+    opacity: 0;
+    /* transform: scale(0.2); */
+    animation: fadeIn 3s ease-out forwards; 
+}
+
+/* icon imgs */
+#aboutMe img {
+    min-width: 70%;
+    max-height: 70%;
+    opacity: 0;
+    /* transform: scale(0.2); */
+    animation: fadeIn 3s ease-out forwards; 
+}
+
+#aboutMe p {
+    font-size: clamp(12px, 1.2vw, 20px);
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards; 
+}
+
+
+
+/* responsiveness ----------------------------clamp(12px, 1em, 20px); */
+@media screen and (max-width: 1000px) {
+    #aboutMe div {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #aboutMe li {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #aboutMe li {
+        width: 100%;
+        flex-direction: row;
+    }
+    #aboutMe div {
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+      /* transform: scale(1); */
+    }
+}

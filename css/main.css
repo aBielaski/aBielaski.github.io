@@ -1,0 +1,424 @@
+/*
+    border: 1px solid yellowgreen;
+
+*/
+
+/* * {
+    outline: 1px dashed lime;
+} */
+
+body {
+    background: linear-gradient(
+        to right,
+        #000000 0%,
+        #2D080E 50%,
+        #000000 100%
+    );
+    margin: unset;
+    color: #CACACA;
+    font-family: 'Rubik', sans-serif;
+    max-width: 2000px;
+    margin: auto;
+}
+
+.headerFont {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.subFont {
+    font-family: 'Rubik', sans-serif;
+}
+
+.pinkText {
+    color: #fc616b;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* nav --------------------------------------------------*/
+nav {
+    background-color: #1C0F14;
+    padding: 10px;
+    height: 50px;
+    width: calc(100% - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: sticky;
+    top: 0; */
+}
+
+nav img {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav a {
+    padding: 15px 10px;
+    margin-inline: 20px;
+    color: #CACACA;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 5px;
+    background-color: #fc616b;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+  
+nav a:hover::after,
+nav a:focus::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* scroll to top btn */
+.scroll-to-top {
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    color: #322d30;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: #fc616b;
+    box-shadow: 1px 1px 1px 0px rgb(130, 116, 116);  /* offset-x offset-y blur-radius spread-radius color; */
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+  
+.scroll-to-top:hover {
+    transform: scale(1.1);
+    background-color: #e35058;
+}
+
+
+/* footer --------------------------------------------------*/
+footer {
+    border-top: 1px solid #9d9d9c90;
+    margin: 0 clamp(10px, 3vw, 50px);
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 18px;
+    padding-inline: 5px;
+}
+
+/* sections --------------------------------------------------*/
+header {
+    background: linear-gradient(
+        to bottom,
+        #1C0F14 0%,
+        #300F15 14%,
+        #4B0F16 33%,
+        #650F1E 69%,
+        #AD1526 100%
+    );
+}
+
+h3 {
+    font-size: clamp(16px, 4vw, 1.8em);
+    text-align: center;
+    margin-bottom: clamp(30px, 3vw, 50px);
+}
+
+.sectionPadding {
+    padding: clamp(10px, 3vw, 50px);
+}
+
+#homePage > section {
+    padding-bottom: clamp(10px, 4vw, 100px);
+}
+
+section > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* pink Glow Border On Black --------------------------------------------------*/
+.pinkGlowBorderOnBlack {
+    background-color: black;
+    position: relative;
+    border-top: 2px solid #FC616B;
+    border-bottom: 2px solid #FC616B;
+    z-index: 0;
+}
+
+.pinkGlowBorderOnBlack::before, .pinkGlowBorderOnBlack::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    opacity: 0.8;
+    filter: blur(12px);
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(252, 97, 107, 1), transparent);
+    animation: glowPulse 4s ease-in-out infinite;
+} 
+
+.pinkGlowBorderOnBlack::before {
+    top: -6px;
+}
+
+.pinkGlowBorderOnBlack::after {
+    top: auto;
+    bottom: -6px;
+    background: linear-gradient(to top, rgba(252, 97, 107, 1), transparent);
+}
+
+/* pages --------------------------------------------------*/
+.sampleWorkPage > header {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.sampleWorkPage > header > h2 {
+    font-size: clamp(25px, 5vw, 96px);
+}
+
+.sampleWorkPage > header > img {
+    height: clamp(30px, 7vw, 120px);
+    /* filter: drop-shadow(0 0 15px rgba(232, 150, 156, 0.1));  */
+}
+
+/* item section -------------- */
+.sampleWorkPage > ul {
+    list-style-type: none;
+}
+
+.sampleWorkPage li,
+.sampleWorkPage ul,
+.sampleWorkPage body {
+  position: relative;
+  z-index: 1;
+}
+
+.sampleWorkPage > ul > li {
+    z-index: 1;
+}
+
+.sampleWorkPage > ul > li > h3 {
+    text-align: left;
+    font-size: clamp(16px, 2vw, 25px);
+    margin-bottom: 30px;
+}
+
+.blackSection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    padding-block: 30px;
+}
+
+.leftSideDiv {
+    display: grid;
+    grid-template-rows: 350px auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-height: 100%;
+}
+
+.leftSideDiv.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: linear-gradient(
+        to right,
+        #000000 0%,
+        #2D080E 50%,
+        #000000 100%
+    );
+    grid-template-rows: 85vh auto;
+    grid-template-columns: 1fr;
+    
+}
+
+.leftSideDiv img, 
+.leftSideDiv video {
+    object-fit: contain;
+    width: 90%;
+    max-width: 2000px;
+    height: 95%;
+    margin: auto;
+    filter: drop-shadow(0 0 15px rgba(232, 150, 156, 0.35)); 
+}
+
+.leftSideDiv img.fadeInOnce, 
+.leftSideDiv video.fadeInOnce {
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards;  /* fadeIn 3s ease-out forwards;      opacity 1s ease-out, transform 1s ease-out;  */
+}
+
+/* .leftSideDiv img.show,
+.leftSideDiv video.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.btnDiv {
+    margin: auto;
+    height: 100%;
+}
+
+.btnDiv span {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}
+
+.sampleWorkPage button {
+    background-color: #fc616b;
+    margin-inline: 5px;
+    border: none;
+    border-radius: 4px;
+    color: #322d30;
+    font-weight: bold;
+    font-size: 20px;
+    aspect-ratio: 1 / 1;
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px 1px 0px rgb(130, 116, 116);  /* offset-x offset-y blur-radius spread-radius color; */
+    display: inline-block;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #e35058;
+  }
+
+.sampleWorkPage button img {
+    height: 18px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* right side --------------------- */
+.sampleWorkPage > ul > li  p {
+    overflow-y: auto;
+    max-height: 100%;
+    width: 98%;
+    margin: unset;
+    opacity: 0;
+    animation: fadeIn 3s ease-out forwards; 
+}
+
+
+
+
+
+
+
+/* responsiveness ---------------------------- */ 
+
+@media screen and (min-width: 2000px) {
+    .scroll-to-top {
+        right: calc((100vw - 2000px) / 2); 
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blackSection {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    .sampleWorkPage > ul > li  p {
+        text-align: center;
+        width: 100%;
+    }
+    .leftSideDiv {
+        grid-template-rows: 300px auto;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 719px)
+{
+    nav ul {
+        justify-content: flex-end;
+        padding-left: 0;
+    }
+    nav a {
+        font-size: 0.79em;
+        padding-inline: 10px;
+        margin-inline: 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    nav {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    nav img {
+        height: 7vh;
+        padding-top: 2vh;
+        display: none;
+    }
+    nav ul {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 5px;
+    }
+    nav a {
+        font-size: 0.7em;
+        padding-inline: 5px;
+        margin-inline: 0px;
+    }
+}
+
+/* animations ---------------------------- */
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.6;
+        filter: blur(6px);
+    }
+    50% {
+        opacity: 1;
+        filter: blur(10px);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
