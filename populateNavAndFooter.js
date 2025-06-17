@@ -17,7 +17,7 @@ function populateNavMenu() {
         navItemLink.href = item.route;
 
         //underline the current page
-        if (item.route === currentPath) {
+        if (item.route === currentPath || (item.route === "index.html" && currentPath === "")) {
             navItemLink.classList.add("active");
         }
 
