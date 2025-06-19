@@ -323,7 +323,11 @@ section > ul {
 button:active {
     transform: scale(0.95);
     background-color: #e35058;
-  }
+}
+
+button:focus {
+    border: 2px solid #CACACA;
+}
 
 .sampleWorkPage button img {
     height: 18px;
